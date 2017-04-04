@@ -1,0 +1,16 @@
+Package: learnr
+Type: Package
+Title: "Learn R ...as you learnt your mother tongue" data sets
+Version: 0.0.1
+Date: 2017-04-04
+Authors@R:
+   c(
+    person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"))
+    )
+Description: Data sets from the book "Learn R ...as you learnt 
+    your mother tongue" by Pedro J. Aphalo.
+License: GPL (>= 2)
+URL: http://leanpub.com/learnr
+BugReports: https://bitbucket.org/aphalo/learnr/issues
+Encoding: UTF-8
+LazyData: true
