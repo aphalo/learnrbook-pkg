@@ -2,7 +2,7 @@ Package: learnr
 Type: Package
 Title: "Learn R ...as you learnt your mother tongue" data sets
 Version: 0.0.1
-Date: 2017-04-04
+Date: 2017-04-28
 Authors@R:
    c(
     person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"))
@@ -10,7 +10,14 @@ Authors@R:
 Description: Data sets from the book "Learn R ...as you learnt 
     your mother tongue" by Pedro J. Aphalo.
 License: GPL (>= 2)
+Depends:
+    R (>= 3.3.0)
+Suggests:
+    roxygen2 (>= 6.0.1)
 URL: http://leanpub.com/learnr
 BugReports: https://bitbucket.org/aphalo/learnr/issues
 Encoding: UTF-8
-LazyData: true
+LazyLoad: yes
+LazyData: yes
+ByteCompile: yes
+RoxygenNote: 6.0.1
