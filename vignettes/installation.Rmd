@@ -1,0 +1,112 @@
+---
+title: "Installation and use"
+author: "Pedro  J. Aphalo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Installation and use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+
+This package contains data sets used in the code examples in the book "Learn R 
+...as you learnt your mother tongue" by Pedro J. Aphalo, available at
+<http://leanpub.com/leranr>. The book uses mostly data sets included in the
+R distribution itself and in the packages available through CRAN that are
+described in the book, so few data sets are included as R data in this package. 
+However, to demonstrate the reading of foreign data
+formats I use in the book several files. These files are part of this
+package and installed in the `extdata` folder.
+
+## Installation of packages
+
+Installation of the package itself is not different to that of any other
+package available through CRAN.
+
+```{r, eval=FALSE}
+install.packages("learnr")
+```
+
+To install the current development version from Bitbucket (possibly buggy
+or matching a revision of the book not yet published) use the code in the next
+chunck. (Unless package 'devtools'
+is already installed in the computer you are using, you will need to install
+this package by uncommenting and executing the first line of the code below.)
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_bitbucket("aphalo/learnr-pkg")
+```
+
+In the code examples in the book I use more than 40 packages available from 
+CRAN, and three not yet in CRAN but available from Github. They are listed at 
+the start of each chapter. To facilitate their
+installation and use, vectors containing package names used in each chapter of
+the book are provided, as well as a vector will all the names together.
+
+To install all the packages used in the book you can use.
+
+```{r, eval=FALSE}
+install.packages(learnr::pkgs_all)
+```
+
+If you rather install only the packages used in a given chapter use, for example,
+for theplotting with `ggplot' chapter.
+
+```{r, eval=FALSE}
+install.packages(learnr::pkgs_ch_ggplot)
+```
+
+Even though three of the packages are not in CRAN, they are all listed in the
+vectors of names in hope that in the future they will be submitted to CRAN.
+
+An additional vector `pkgs_at_github` provides the paths to the Github repositories for these 
+three packages.
+
+These can be installed as follows.
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+for (pkg in pkgs_at_github) {
+  devtools::install_github(pkg)
+}
+```
+
+## Use of examples files
+
+Example files are installed in folder `extdata` under the root folder of the
+installed package. The location and path to where a package is installed is
+dependent on the operating system and account settings, and the settings in
+the `.Rprofile` file. However, R provides a simple way for querying this path to
+where the example files are stored.
+
+```{r}
+system.file("extdata", package = "learnr")
+```
+
+We can also easily get a list of the available example files.
+
+```{r}
+path2examples <- system.file("extdata", package = "learnr")
+list.files(path2examples)
+```
+
+The formats of these files are:
+
+| File name "tag" | Format | other |
+|:-----------------|:--------|:--------------------------------|
+| .SYS            | Systat | proprietary, format depends on operating system |
+| .tif            | TIFF   | Bitmap, variations exist in bit depth and compression used  |
+| .sav            | SPSS   | proprietary            |
+| .txt            | ASCII  | open                   |
+| .nc             | NetCDF | open                   |
+| .xlsx           | Excell | proprietary, modern, XML based      |
+
+These files are used in Chapter "Storing and manipulating data with R".
+
+The sources of the data in these files, and a short descriptions of the data
+follow.
+
+
