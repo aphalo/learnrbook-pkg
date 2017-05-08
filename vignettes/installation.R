@@ -17,3 +17,10 @@
 #    devtools::install_github(pkg)
 #  }
 
+## ------------------------------------------------------------------------
+system.file("extdata", package = "learnr")
+
+## ------------------------------------------------------------------------
+path2examples <- system.file("extdata", package = "learnr")
+list.files(path2examples)
+

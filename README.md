@@ -18,7 +18,7 @@ use:
 
 ```{r}
 install.packages("devtools")
-devtools::install_github("aphalo/learnr")
+devtools::install_github("aphalo/learnr-pkg")
 ```
 
 Please, see the web site [r4photobiology](http://www.r4photobiology.info) for

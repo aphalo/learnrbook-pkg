@@ -109,4 +109,20 @@ These files are used in Chapter "Storing and manipulating data with R".
 The sources of the data in these files, and a short descriptions of the data
 follow.
 
+| File           | when saved | Data |Source |
+|:---------------|:-----------|:-----|-----------|
+| BIRCH1.SYS     | 1992       | Birch seeedlings | Aphalo and Rikala (2002) |
+| Book1.xlsx     | 2017       | artificial data | Original |
+| dahlia-uva.tif | 2017       | photograph | Original, P. J. Aphalo |
+| dahlia-vis.tif | 2017       | photograph | Original, P. J. Aphalo |
+| logger_1.txt   | 2016       | from Yocto Puce datalogger | Original, P. J. Aphalo |
+| meteo-data.nc  | 2017       | meteorological | see help for source |
+| my-data-dwn.xlsx |          |               |     |
+| my-data.sav    | ????       | SPSS data file |    |
+| my-data.xlsx   | ????       |             |       |
+| pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors, at FMI |
+| pevpr.sfc.mon.ltm.nc | ???? | ???? | ???? |
+| thiamin.sav    | ????       |           |         |
+
+Do see the individual help pages for additional details on the data sets.
 

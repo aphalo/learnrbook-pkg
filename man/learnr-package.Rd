@@ -20,7 +20,7 @@ in the book.
 Useful links:
 \itemize{
   \item \url{http://leanpub.com/learnr}
-  \item Report bugs at \url{https://bitbucket.org/aphalo/learnr/issues}
+  \item Report bugs at \url{https://bitbucket.org/aphalo/learnr-pkg/issues}
 }
 
 }
