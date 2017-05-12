@@ -30,17 +30,6 @@ package available through CRAN.
 install.packages("learnrbook")
 ```
 
-To install the current development version from Bitbucket (possibly buggy
-or matching a revision of the book not yet published) use the code in the next
-chunck. (Unless package 'devtools'
-is already installed in the computer you are using, you will need to install
-this package by uncommenting and executing the first line of the code below.)
-
-```{r, eval=FALSE}
-# install.packages("devtools")
-devtools::install_bitbucket("aphalo/learnr-pkg")
-```
-
 In the code examples in the book I use more than 40 packages available from 
 CRAN, and three not yet in CRAN but available from Github. They are listed at 
 the start of each chapter. To facilitate their
@@ -70,7 +59,7 @@ These can be installed as follows.
 
 ```{r, eval=FALSE}
 # install.packages("devtools")
-for (pkg in pkgs_at_github) {
+for (pkg in learnrbook::pkgs_at_github) {
   devtools::install_github(pkg)
 }
 ```
