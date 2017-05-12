@@ -1,5 +1,6 @@
 ---
 title: "Installation and use"
+subtitle: "`learnrbook` `r packageVersion('learnrbook')`"
 author: "Pedro  J. Aphalo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -13,7 +14,7 @@ vignette: >
 
 This package contains data sets used in the code examples in the book "Learn R 
 ...as you learnt your mother tongue" by Pedro J. Aphalo, available at
-<http://leanpub.com/leranr>. The book uses mostly data sets included in the
+<https://leanpub.com/learnr>. The book uses mostly data sets included in the
 R distribution itself and in the packages available through CRAN that are
 described in the book, so few data sets are included as R data in this package. 
 However, to demonstrate the reading of foreign data
@@ -26,7 +27,7 @@ Installation of the package itself is not different to that of any other
 package available through CRAN.
 
 ```{r, eval=FALSE}
-install.packages("learnr")
+install.packages("learnrbook")
 ```
 
 To install the current development version from Bitbucket (possibly buggy
@@ -49,18 +50,18 @@ the book are provided, as well as a vector will all the names together.
 To install all the packages used in the book you can use.
 
 ```{r, eval=FALSE}
-install.packages(learnr::pkgs_all)
+install.packages(learnrbook::pkgs_all)
 ```
 
 If you rather install only the packages used in a given chapter use, for example,
 for theplotting with `ggplot' chapter.
 
 ```{r, eval=FALSE}
-install.packages(learnr::pkgs_ch_ggplot)
+install.packages(learnrbook::pkgs_ch_ggplot)
 ```
 
 Even though three of the packages are not in CRAN, they are all listed in the
-vectors of names in hope that in the future they will be submitted to CRAN.
+vectors of names in the hope that in the future they will be submitted to CRAN.
 
 An additional vector `pkgs_at_github` provides the paths to the Github repositories for these 
 three packages.
@@ -82,14 +83,14 @@ dependent on the operating system and account settings, and the settings in
 the `.Rprofile` file. However, R provides a simple way for querying this path to
 where the example files are stored.
 
-```{r}
-system.file("extdata", package = "learnr")
+```{r, eval=FALSE}
+system.file("extdata", package = "learnrbook")
 ```
 
 We can also easily get a list of the available example files.
 
 ```{r}
-path2examples <- system.file("extdata", package = "learnr")
+path2examples <- system.file("extdata", package = "learnrbook")
 list.files(path2examples)
 ```
 
@@ -104,10 +105,11 @@ The formats of these files are:
 | .nc             | NetCDF | open                   |
 | .xlsx           | Excell | proprietary, modern, XML based      |
 
-These files are used in Chapter "Storing and manipulating data with R".
+The files are used in Chapter "Storing and manipulating data with R" and in
+Chapter "Plotting maps and images".
 
 The sources of the data in these files, and a short descriptions of the data
-follow.
+follows. However, see the individual help pages for additional details on the data sets.
 
 | File           | when saved | Data |Source |
 |:---------------|:-----------|:-----|-----------|
@@ -117,12 +119,11 @@ follow.
 | dahlia-vis.tif | 2017       | photograph | Original, P. J. Aphalo |
 | logger_1.txt   | 2016       | from Yocto Puce datalogger | Original, P. J. Aphalo |
 | meteo-data.nc  | 2017       | meteorological | see help for source |
-| my-data-dwn.xlsx |          |               |     |
-| my-data.sav    | ????       | SPSS data file |    |
-| my-data.xlsx   | ????       |             |       |
-| pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors, at FMI |
+| my-data.sav    |        | artificial |       |
+| my-data.xlsx   |        | artificial |       |
+| pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors |
 | pevpr.sfc.mon.ltm.nc | ???? | ???? | ???? |
 | thiamin.sav    | ????       |           |         |
 
-Do see the individual help pages for additional details on the data sets.
+
 

@@ -1,22 +1,22 @@
-# learnr #
+# learnrbook #
 
-Package '**learnr**' comtains data and foreign files used in examples in the
+Package '**learnrbook**' comtains data and foreign files used in examples in the
 book "Learn R ...as you learnt your mother tongue" by Pedro J. Aphalo (available 
 at <https://leanpub.com/learnr>).  
 
-In addition this package exports as character string vectors the names of the
+In addition this package exports as character vectors the names of the
 packages used in the book, so as to make it easier to install them.
 
 To install this R package from CRAN (not yet submitted!) use:
 
-```{r}
-install.packages("learnr")
+```
+install.packages("learnrbook")
 ```
 
 To install the development version from the Git repository at Bitbucket, do
 use:
 
-```{r}
+```
 install.packages("devtools")
 devtools::install_github("aphalo/learnr-pkg")
 ```
@@ -26,6 +26,6 @@ details and update notices. Other packages, aimed at easing photobiology-related
 calculations including the quantification of biologically effective radiation in
 meteorology are available at the same website.
 
-The current release of '__learn__' is available through [CRAN](https://cran.r-project.org/package=learn) 
+The current release of '__learnbook__' is available through [CRAN](https://cran.r-project.org/package=learnbook) 
 for R (>= 3.3.0).
 

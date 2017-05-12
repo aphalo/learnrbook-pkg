@@ -1,15 +1,15 @@
 ## ---- eval=FALSE---------------------------------------------------------
-#  install.packages("learnr")
+#  install.packages("learnrbook")
 
 ## ---- eval=FALSE---------------------------------------------------------
 #  # install.packages("devtools")
 #  devtools::install_bitbucket("aphalo/learnr-pkg")
 
 ## ---- eval=FALSE---------------------------------------------------------
-#  install.packages(learnr::pkgs_all)
+#  install.packages(learnrbook::pkgs_all)
 
 ## ---- eval=FALSE---------------------------------------------------------
-#  install.packages(learnr::pkgs_ch_ggplot)
+#  install.packages(learnrbook::pkgs_ch_ggplot)
 
 ## ---- eval=FALSE---------------------------------------------------------
 #  # install.packages("devtools")
@@ -17,10 +17,10 @@
 #    devtools::install_github(pkg)
 #  }
 
-## ------------------------------------------------------------------------
-system.file("extdata", package = "learnr")
+## ---- eval=FALSE---------------------------------------------------------
+#  system.file("extdata", package = "learnrbook")
 
 ## ------------------------------------------------------------------------
-path2examples <- system.file("extdata", package = "learnr")
+path2examples <- system.file("extdata", package = "learnrbook")
 list.files(path2examples)
 

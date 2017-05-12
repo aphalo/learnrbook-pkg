@@ -1,11 +1,12 @@
-citHeader("To cite package 'learn' in publications, please use:")
+citHeader("To cite package 'learnrbook' in publications, please use:")
 
 citEntry(entry = "book",
   author = "Pedro J. Aphalo",
   title = "Learn R ...as you learnt your mother tongue",
-  journal = "UV4Plants Bulletin",
   publisher = "Leanpub",
-  pages = "461",
+  pages = "522",
   year = "2017",
-  textVersion = "Aphalo, Pedro J. (2017) Learn R ...as you learnt your mother tongue. Leanpub. url://leanpub.com/learnr"
+  url = "https://leanpub.com/learnr",
+  textVersion = "Aphalo, Pedro J. (2017) Learn R ...as you learnt your mother tongue. Leanpub.
+  <https://leanpub.com/learnr>."
 )

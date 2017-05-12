@@ -12,7 +12,7 @@
 
 <meta name="author" content="Pedro J. Aphalo" />
 
-<meta name="date" content="2017-05-08" />
+<meta name="date" content="2017-05-12" />
 
 <title>Installation and use</title>
 
@@ -69,28 +69,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <h1 class="title toc-ignore">Installation and use</h1>
+<h3 class="subtitle"><em><code>learnrbook</code> 0.0.2</em></h3>
 <h4 class="author"><em>Pedro J. Aphalo</em></h4>
-<h4 class="date"><em>2017-05-08</em></h4>
+<h4 class="date"><em>2017-05-12</em></h4>
 
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This package contains data sets used in the code examples in the book “Learn R …as you learnt your mother tongue” by Pedro J. Aphalo, available at <a href="http://leanpub.com/leranr" class="uri">http://leanpub.com/leranr</a>. The book uses mostly data sets included in the R distribution itself and in the packages available through CRAN that are described in the book, so few data sets are included as R data in this package. However, to demonstrate the reading of foreign data formats I use in the book several files. These files are part of this package and installed in the <code>extdata</code> folder.</p>
+<p>This package contains data sets used in the code examples in the book “Learn R …as you learnt your mother tongue” by Pedro J. Aphalo, available at <a href="https://leanpub.com/learnr" class="uri">https://leanpub.com/learnr</a>. The book uses mostly data sets included in the R distribution itself and in the packages available through CRAN that are described in the book, so few data sets are included as R data in this package. However, to demonstrate the reading of foreign data formats I use in the book several files. These files are part of this package and installed in the <code>extdata</code> folder.</p>
 </div>
 <div id="installation-of-packages" class="section level2">
 <h2>Installation of packages</h2>
 <p>Installation of the package itself is not different to that of any other package available through CRAN.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;learnr&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;learnrbook&quot;</span>)</code></pre></div>
 <p>To install the current development version from Bitbucket (possibly buggy or matching a revision of the book not yet published) use the code in the next chunck. (Unless package ‘devtools’ is already installed in the computer you are using, you will need to install this package by uncommenting and executing the first line of the code below.)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;devtools&quot;)</span>
 devtools::<span class="kw">install_bitbucket</span>(<span class="st">&quot;aphalo/learnr-pkg&quot;</span>)</code></pre></div>
 <p>In the code examples in the book I use more than 40 packages available from CRAN, and three not yet in CRAN but available from Github. They are listed at the start of each chapter. To facilitate their installation and use, vectors containing package names used in each chapter of the book are provided, as well as a vector will all the names together.</p>
 <p>To install all the packages used in the book you can use.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(learnr::pkgs_all)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(learnrbook::pkgs_all)</code></pre></div>
 <p>If you rather install only the packages used in a given chapter use, for example, for theplotting with `ggplot’ chapter.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(learnr::pkgs_ch_ggplot)</code></pre></div>
-<p>Even though three of the packages are not in CRAN, they are all listed in the vectors of names in hope that in the future they will be submitted to CRAN.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(learnrbook::pkgs_ch_ggplot)</code></pre></div>
+<p>Even though three of the packages are not in CRAN, they are all listed in the vectors of names in the hope that in the future they will be submitted to CRAN.</p>
 <p>An additional vector <code>pkgs_at_github</code> provides the paths to the Github repositories for these three packages.</p>
 <p>These can be installed as follows.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;devtools&quot;)</span>
@@ -98,8 +99,139 @@ for (pkg in pkgs_at_github) {
   devtools::<span class="kw">install_github</span>(pkg)
 }</code></pre></div>
 </div>
-<div id="use-of-foreign-files" class="section level2">
-<h2>Use of foreign files</h2>
+<div id="use-of-examples-files" class="section level2">
+<h2>Use of examples files</h2>
+<p>Example files are installed in folder <code>extdata</code> under the root folder of the installed package. The location and path to where a package is installed is dependent on the operating system and account settings, and the settings in the <code>.Rprofile</code> file. However, R provides a simple way for querying this path to where the example files are stored.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)</code></pre></div>
+<p>We can also easily get a list of the available example files.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path2examples &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)
+<span class="kw">list.files</span>(path2examples)</code></pre></div>
+<pre><code>##  [1] &quot;BIRCH1.SYS&quot;           &quot;Book1.xlsx&quot;           &quot;areatable.dat&quot;       
+##  [4] &quot;dahlia-uva.tif&quot;       &quot;dahlia-vis.tif&quot;       &quot;logger_1.txt&quot;        
+##  [7] &quot;meteo-data.nc&quot;        &quot;my-data.sav&quot;          &quot;my-data.xlsx&quot;        
+## [10] &quot;pet_ltm.nc&quot;           &quot;pevpr.sfc.mon.ltm.nc&quot; &quot;thiamin.sav&quot;</code></pre>
+<p>The formats of these files are:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">File name “tag”</th>
+<th align="left">Format</th>
+<th align="left">other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">.SYS</td>
+<td align="left">Systat</td>
+<td align="left">proprietary, format depends on operating system</td>
+</tr>
+<tr class="even">
+<td align="left">.tif</td>
+<td align="left">TIFF</td>
+<td align="left">Bitmap, variations exist in bit depth and compression used</td>
+</tr>
+<tr class="odd">
+<td align="left">.sav</td>
+<td align="left">SPSS</td>
+<td align="left">proprietary</td>
+</tr>
+<tr class="even">
+<td align="left">.txt</td>
+<td align="left">ASCII</td>
+<td align="left">open</td>
+</tr>
+<tr class="odd">
+<td align="left">.nc</td>
+<td align="left">NetCDF</td>
+<td align="left">open</td>
+</tr>
+<tr class="even">
+<td align="left">.xlsx</td>
+<td align="left">Excell</td>
+<td align="left">proprietary, modern, XML based</td>
+</tr>
+</tbody>
+</table>
+<p>The files are used in Chapter “Storing and manipulating data with R” and in Chapter “Plotting maps and images”.</p>
+<p>The sources of the data in these files, and a short descriptions of the data follows. However, see the individual help pages for additional details on the data sets.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">when saved</th>
+<th align="left">Data</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BIRCH1.SYS</td>
+<td align="left">1992</td>
+<td align="left">Birch seeedlings</td>
+<td>Aphalo and Rikala (2002)</td>
+</tr>
+<tr class="even">
+<td align="left">Book1.xlsx</td>
+<td align="left">2017</td>
+<td align="left">artificial data</td>
+<td>Original</td>
+</tr>
+<tr class="odd">
+<td align="left">dahlia-uva.tif</td>
+<td align="left">2017</td>
+<td align="left">photograph</td>
+<td>Original, P. J. Aphalo</td>
+</tr>
+<tr class="even">
+<td align="left">dahlia-vis.tif</td>
+<td align="left">2017</td>
+<td align="left">photograph</td>
+<td>Original, P. J. Aphalo</td>
+</tr>
+<tr class="odd">
+<td align="left">logger_1.txt</td>
+<td align="left">2016</td>
+<td align="left">from Yocto Puce datalogger</td>
+<td>Original, P. J. Aphalo</td>
+</tr>
+<tr class="even">
+<td align="left">meteo-data.nc</td>
+<td align="left">2017</td>
+<td align="left">meteorological</td>
+<td>see help for source</td>
+</tr>
+<tr class="odd">
+<td align="left">my-data.sav</td>
+<td align="left"></td>
+<td align="left">artificial</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">my-data.xlsx</td>
+<td align="left"></td>
+<td align="left">artificial</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="left">pet_ltm.nc</td>
+<td align="left">2014</td>
+<td align="left">meteorological</td>
+<td>Data of Anders Lindfors</td>
+</tr>
+<tr class="even">
+<td align="left">pevpr.sfc.mon.ltm.nc</td>
+<td align="left">????</td>
+<td align="left">????</td>
+<td>????</td>
+</tr>
+<tr class="odd">
+<td align="left">thiamin.sav</td>
+<td align="left">????</td>
+<td align="left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
