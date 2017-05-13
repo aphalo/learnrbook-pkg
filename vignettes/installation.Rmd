@@ -1,5 +1,6 @@
 ---
 title: "Installation and use"
+subtitle: "'learnrbook' `r packageVersion('learnrbook')`"
 author: "Pedro  J. Aphalo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
