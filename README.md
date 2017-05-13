@@ -18,6 +18,3 @@ details and update notices. Other packages, aimed at easing photobiology-related
 calculations including the quantification of biologically effective radiation in
 meteorology are available at the same website.
 
-The current release of '__learnrbook__' is available through [CRAN](https://cran.r-project.org/package=learnrbook) 
-for R (>= 3.3.0).
-

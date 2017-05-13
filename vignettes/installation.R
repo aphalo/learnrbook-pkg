@@ -2,10 +2,6 @@
 #  install.packages("learnrbook")
 
 ## ---- eval=FALSE---------------------------------------------------------
-#  # install.packages("devtools")
-#  devtools::install_bitbucket("aphalo/learnr-pkg")
-
-## ---- eval=FALSE---------------------------------------------------------
 #  install.packages(learnrbook::pkgs_all)
 
 ## ---- eval=FALSE---------------------------------------------------------
@@ -13,7 +9,7 @@
 
 ## ---- eval=FALSE---------------------------------------------------------
 #  # install.packages("devtools")
-#  for (pkg in pkgs_at_github) {
+#  for (pkg in learnrbook::pkgs_at_github) {
 #    devtools::install_github(pkg)
 #  }
 

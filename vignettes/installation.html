@@ -12,7 +12,7 @@
 
 <meta name="author" content="Pedro J. Aphalo" />
 
-<meta name="date" content="2017-05-12" />
+<meta name="date" content="2017-05-13" />
 
 <title>Installation and use</title>
 
@@ -69,9 +69,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <h1 class="title toc-ignore">Installation and use</h1>
-<h3 class="subtitle"><em><code>learnrbook</code> 0.0.2</em></h3>
 <h4 class="author"><em>Pedro J. Aphalo</em></h4>
-<h4 class="date"><em>2017-05-12</em></h4>
+<h4 class="date"><em>2017-05-13</em></h4>
 
 
 
@@ -83,9 +82,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>Installation of packages</h2>
 <p>Installation of the package itself is not different to that of any other package available through CRAN.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;learnrbook&quot;</span>)</code></pre></div>
-<p>To install the current development version from Bitbucket (possibly buggy or matching a revision of the book not yet published) use the code in the next chunck. (Unless package ‘devtools’ is already installed in the computer you are using, you will need to install this package by uncommenting and executing the first line of the code below.)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;devtools&quot;)</span>
-devtools::<span class="kw">install_bitbucket</span>(<span class="st">&quot;aphalo/learnr-pkg&quot;</span>)</code></pre></div>
 <p>In the code examples in the book I use more than 40 packages available from CRAN, and three not yet in CRAN but available from Github. They are listed at the start of each chapter. To facilitate their installation and use, vectors containing package names used in each chapter of the book are provided, as well as a vector will all the names together.</p>
 <p>To install all the packages used in the book you can use.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(learnrbook::pkgs_all)</code></pre></div>
@@ -95,7 +91,7 @@ devtools::<span class="kw">install_bitbucket</span>(<span class="st">&quot;aphal
 <p>An additional vector <code>pkgs_at_github</code> provides the paths to the Github repositories for these three packages.</p>
 <p>These can be installed as follows.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;devtools&quot;)</span>
-for (pkg in pkgs_at_github) {
+for (pkg in learnrbook::pkgs_at_github) {
   devtools::<span class="kw">install_github</span>(pkg)
 }</code></pre></div>
 </div>
