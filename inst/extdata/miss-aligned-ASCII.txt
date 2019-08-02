@@ -1,0 +1,5 @@
+col1  col2 col3 col4
+1.0   24.5  346 ABC
+2.4   45.6   78 XYZ
+20.4   45.6   78 XYZ
+ a    20     2500 abc

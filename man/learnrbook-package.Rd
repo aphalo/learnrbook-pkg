@@ -7,7 +7,7 @@
 \title{learnrbook: Datasets for Aphalo's "Learn R" Book}
 \description{
 Datasets used in the book "Learn R ...as you learnt your mother
-tongue" by Pedro J. Aphalo (2017) <https://leanpub.com/learnr>.
+    tongue" by Pedro J. Aphalo (2017) <https://leanpub.com/learnr>.
 }
 \details{
 Package 'learnr' is a companion to the book "Learn R ...as you learnt your
