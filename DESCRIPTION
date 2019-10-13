@@ -1,8 +1,8 @@
 Package: learnrbook
 Type: Package
 Title: Datasets for Aphalo's "Learn R" Book
-Version: 0.0.2.9001
-Date: 2017-08-02
+Version: 0.0.2.9002
+Date: 2019-10-13
 Authors@R:
    c(
     person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"))
