@@ -12,14 +12,13 @@ vignette: >
 
 ## Introduction
 
-This package contains data sets used in the code examples in the book "Learn R 
-...as you learnt your mother tongue" by Pedro J. Aphalo, available at
-<https://leanpub.com/learnr>. The book uses mostly data sets included in the
-R distribution itself and in the packages available through CRAN that are
-described in the book, so few data sets are included as R data in this package. 
-However, to demonstrate the reading of foreign data
-formats I use in the book several files. These files are part of this
-package and installed in the `extdata` folder.
+This package contains data sets used in the code examples in the book "Learn R:
+As a Language" by Pedro J. Aphalo, available at <https://leanpub.com/learnr>.
+The book uses mostly data sets included in the R distribution itself and in
+packages available through CRAN, so few additional data sets are included as R
+data in this package. However, to demonstrate the reading of foreign data
+formats I use in the book several files. These files are part of this package
+and installed in the `extdata` folder.
 
 ## Installation of packages
 
@@ -30,11 +29,10 @@ package available through CRAN.
 install.packages("learnrbook")
 ```
 
-In the code examples in the book I use more than 40 packages available from 
-CRAN, and three not yet in CRAN but available from Github. They are listed at 
-the start of each chapter. To facilitate their
-installation and use, vectors containing package names used in each chapter of
-the book are provided, as well as a vector will all the names together.
+In the code examples in the book I use several packages available from 
+CRAN,. They are loaded in a code chunck at 
+the start of chapters 6, 7, and 8, where they are used. To facilitate their
+installation and use, vectors containing package names are provided.
 
 To install all the packages used in the book you can use.
 
@@ -42,26 +40,11 @@ To install all the packages used in the book you can use.
 install.packages(learnrbook::pkgs_all)
 ```
 
-If you rather install only the packages used in a given chapter use, for example,
-for theplotting with `ggplot' chapter.
+If you rather install only the packages used in a given chapter, for example,
+chapter 7 on the _Gramamr of Graphics_ it is possible to install only these.
 
 ```{r, eval=FALSE}
-install.packages(learnrbook::pkgs_ch_ggplot)
-```
-
-Even though three of the packages are not in CRAN, they are all listed in the
-vectors of names in the hope that in the future they will be submitted to CRAN.
-
-An additional vector `pkgs_at_github` provides the paths to the Github repositories for these 
-three packages.
-
-These can be installed as follows.
-
-```{r, eval=FALSE}
-# install.packages("devtools")
-for (pkg in learnrbook::pkgs_at_github) {
-  devtools::install_github(pkg)
-}
+install.packages(learnrbook::pkgs_ch_graphics)
 ```
 
 ## Use of examples files
@@ -69,8 +52,8 @@ for (pkg in learnrbook::pkgs_at_github) {
 Example files are installed in folder `extdata` under the root folder of the
 installed package. The location and path to where a package is installed is
 dependent on the operating system and account settings, and the settings in
-the `.Rprofile` file. However, R provides a simple way for querying this path to
-where the example files are stored.
+the `.Rprofile` file. However, R provides a simple way for finding the path to
+this folder.
 
 ```{r, eval=FALSE}
 system.file("extdata", package = "learnrbook")
@@ -88,14 +71,19 @@ The formats of these files are:
 | File name "tag" | Format | other |
 |:-----------------|:--------|:--------------------------------|
 | .SYS            | Systat | proprietary, format depends on operating system |
-| .tif            | TIFF   | Bitmap, variations exist in bit depth and compression used  |
 | .sav            | SPSS   | proprietary            |
-| .txt            | ASCII  | open                   |
-| .nc             | NetCDF | open                   |
-| .xlsx           | Excell | proprietary, modern, XML based      |
+| .txt            | text   |                        |
+| .fwd            | text   | fixed-width data fields    |
+| .csv            | text  | comma separated fields |
+| .tsv            | text   | tab(ulator) separated values |
+| .gpx            | text   | GPS position data, XML based     |
+| .nc             | NetCDF | binary, with metadata               |
+| .xlsx           | Excel  | "workbooks", XML based and compressed |
+| .ods            | ODS    | non-proprietary, XML based  |
+| .R              | text   | R script file   |
 
-The files are used in Chapter "Storing and manipulating data with R" and in
-Chapter "Plotting maps and images".
+Most data files are used in Chapter 8 _Data Input and Output_. The R script
+example in Chapter 3 _The R language: “Paragraphs” and “essays”_
 
 The sources of the data in these files, and a short descriptions of the data
 follows. However, see the individual help pages for additional details on the data sets.
@@ -104,15 +92,13 @@ follows. However, see the individual help pages for additional details on the da
 |:---------------|:-----------|:-----|-----------|
 | BIRCH1.SYS     | 1992       | Birch seeedlings | Aphalo and Rikala (2002) |
 | Book1.xlsx     | 2017       | artificial data | Original |
-| dahlia-uva.tif | 2017       | photograph | Original, P. J. Aphalo |
-| dahlia-vis.tif | 2017       | photograph | Original, P. J. Aphalo |
 | logger_1.txt   | 2016       | from Yocto Puce datalogger | Original, P. J. Aphalo |
-| meteo-data.nc  | 2017       | meteorological | see help for source |
+| meteo-data.nc  | 2017       | meteorological |            |
 | my-data.sav    |        | artificial |       |
 | my-data.xlsx   |        | artificial |       |
-| pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors |
+| pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors, FMI |
 | pevpr.sfc.mon.ltm.nc | ???? | ???? | ???? |
 | thiamin.sav    | ????       |           |         |
 
-
+_currently incomplete list_
 

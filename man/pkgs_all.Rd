@@ -3,13 +3,15 @@
 \docType{data}
 \name{pkgs_all}
 \alias{pkgs_all}
-\title{Packages used in book "Learn R ...as you learnt your mother tongue"}
-\format{A vector of character strings.}
+\title{Packages used in book "Learn R: As a Language"}
+\format{
+A vector of character strings.
+}
 \usage{
 pkgs_all
 }
 \description{
-Character vector of package names for whole book.
+Character vector of package names for the whole book.
 }
 \examples{
 pkgs_all

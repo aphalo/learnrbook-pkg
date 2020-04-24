@@ -1,0 +1,63 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r readme-01, echo = FALSE}
+knitr::opts_chunk$set(
+  fig.asp = 2/3,
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+# learnrbook #
+
+[![cran version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-project.org/package=learnrbook)
+
+## Purpose
+
+Package '**learnrbook**' comtains data in R objects and in foreign files used as examples in the
+book "Learn R: As a Language" by Pedro J. Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533".  
+
+In addition this package exports as character vectors the names of the
+packages used in the book, so as to make it easier to install them.
+
+## Installation
+
+Installation of the most recent stable version from CRAN:
+
+```{r cran-instalaltion, eval=FALSE}
+install.packages("ggpmisc")
+```
+
+Installation of the current unstable version from Bitbucket:
+
+```{r bb-instalaltion, eval=FALSE}
+# install.packages("devtools")
+devtools::install_bitbucket("aphalo/ggpmisc")
+```
+
+## Documentation 
+
+HTML documentation is available at (https://docs.r4photobiology.info/learnrbook/).
+
+News about updates are regularly posted at (https://www.r4photobiology.info/).
+
+## Contributing
+
+Please report bugs and request new features at (https://bitbucket.org/aphalo/learnrbook/issues). Pull requests are welcome at (https://bitbucket.org/aphalo/learnrbook).
+
+## Citation
+
+If you use this package to produce scientific or commercial publications, please cite according to:
+
+```{r}
+citation("learnrbook")
+```
+
+## License
+
+© 2018-2020 Pedro J. Aphalo (pedro.aphalo@helsinki.fi). Released under the GPL, version 2 or greater. This software carries no warranty of any kind.

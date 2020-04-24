@@ -4,7 +4,9 @@
 \name{clean5000.df}
 \alias{clean5000.df}
 \title{Subset of RNAseq gene expression data}
-\format{A data.frame with 5 columns and row names.}
+\format{
+A data.frame with 5 columns and 5000 row names.
+}
 \usage{
 clean5000.df
 }
@@ -23,6 +25,10 @@ The variables are as follows:
 }
 }
 \note{
-Original data.
+A subset of size 5000 selected by random sampling,
+}
+\references{
+Neha Rai et al. (2020) Plant Cell and Environment,
+   https://doi.org/10.1111/pce.13752.
 }
 \keyword{datasets}

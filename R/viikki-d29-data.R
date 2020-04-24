@@ -19,8 +19,6 @@
 #' names(viikki_d29.dat)
 #' viikki_d29.dat
 #'
-#' @note
-#' Quantum Devices produces both individual LEDs and luminaires.
-#' \url{http://www.quantumdev.com/}
+#' @references P. J. Aphalo, unpublished data.
 #'
 "viikki_d29.dat"
