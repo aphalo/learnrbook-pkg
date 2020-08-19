@@ -20,24 +20,27 @@ knitr::opts_chunk$set(
 ## Purpose
 
 Package '**learnrbook**' comtains data in R objects and in foreign files used as examples in the
-book "Learn R: As a Language" by Pedro J. Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533".  
+book "Learn R: As a Language" by Pedro J. Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533 (pbk); ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk);
+DOI [10.1201/9780429060342](https://doi.org/10.1201/9780429060342).  
 
-In addition this package exports as character vectors the names of the
+This package exports as character vectors the names of the
 packages used in the book, so as to make it easier to install them.
+
+![](man/figures/cover-9780367182533-small.png)
 
 ## Installation
 
 Installation of the most recent stable version from CRAN:
 
 ```{r cran-instalaltion, eval=FALSE}
-install.packages("ggpmisc")
+install.packages("learnrbook")
 ```
 
 Installation of the current unstable version from Bitbucket:
 
 ```{r bb-instalaltion, eval=FALSE}
 # install.packages("devtools")
-devtools::install_bitbucket("aphalo/ggpmisc")
+devtools::install_bitbucket("aphalo/learnrbook")
 ```
 
 ## Documentation 

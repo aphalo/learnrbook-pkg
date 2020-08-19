@@ -10,24 +10,28 @@ version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-projec
 
 Package ‘**learnrbook**’ comtains data in R objects and in foreign files
 used as examples in the book “Learn R: As a Language” by Pedro J.
-Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533".
+Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533 (pbk);
+ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk); DOI
+[10.1201/9780429060342](https://doi.org/10.1201/9780429060342).
 
 In addition this package exports as character vectors the names of the
 packages used in the book, so as to make it easier to install them.
+
+![](man/figures/cover-9780367182533-small.png)
 
 ## Installation
 
 Installation of the most recent stable version from CRAN:
 
 ``` r
-install.packages("ggpmisc")
+install.packages("learnrbook")
 ```
 
 Installation of the current unstable version from Bitbucket:
 
 ``` r
 # install.packages("devtools")
-devtools::install_bitbucket("aphalo/ggpmisc")
+devtools::install_bitbucket("aphalo/learnrbook")
 ```
 
 ## Documentation
@@ -51,18 +55,14 @@ publications, please cite according to:
 
 ``` r
 citation("learnrbook")
-#> Warning in parseLatex(x): x:1: unexpected END_OF_INPUT 'Learn R: As a Language'
-#> Warning in withCallingHandlers(.External2(C_parseRd, tcon, srcfile, "UTF-8", : <connection>:5: unexpected END_OF_INPUT '.
-#> '
 #> 
 #> Aphalo P (????). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
-#> Book_. R package version 0.0.2.9002, <URL:
+#> Book_. R package version 1.0.0, <URL:
 #> https://CRAN.R-project.org/package=learnrbook>.
 #> 
-#> Aphalo P (2020). _Learn R: As a Language, series R Series. Chapman and
+#> Aphalo P (2020). _Learn R: As a Language_, series R Series. Chapman and
 #> Hall/CRC, New York. ISBN 9780367182533, <URL:
 #> https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533>.
-#> _
 #> 
 #> To see these entries in BibTeX format, use 'print(<citation>,
 #> bibtex=TRUE)', 'toBibtex(.)', or set
