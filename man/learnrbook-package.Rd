@@ -19,7 +19,7 @@ sets used in the book.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{http://docs.r4photobiology.info/learnrbook/}
+  \item \url{https://docs.r4photobiology.info/learnrbook/}
   \item Report bugs at \url{https://bitbucket.org/aphalo/learnrbook-pkg/issues}
 }
 
