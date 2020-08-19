@@ -12,10 +12,26 @@
 
 <meta name="author" content="Pedro J. Aphalo" />
 
-<meta name="date" content="2020-04-24" />
+<meta name="date" content="2020-08-19" />
 
 <title>Installation and use</title>
 
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -302,9 +318,9 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 <h1 class="title toc-ignore">Installation and use</h1>
-<h3 class="subtitle">‘learnrbook’ 1.0.0</h3>
+<h3 class="subtitle">‘learnrbook’ 1.0.1</h3>
 <h4 class="author">Pedro J. Aphalo</h4>
-<h4 class="date">2020-04-24</h4>
+<h4 class="date">2020-08-19</h4>
 
 
 
@@ -312,39 +328,73 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <h2>Introduction</h2>
 <p>This package contains data sets used in the code examples in the book “Learn R: As a Language” by Pedro J. Aphalo, available at <a href="https://leanpub.com/learnr" class="uri">https://leanpub.com/learnr</a>. The book uses mostly data sets included in the R distribution itself and in packages available through CRAN, so few additional data sets are included as R data in this package. However, to demonstrate the reading of foreign data formats I use in the book several files. These files are part of this package and installed in the <code>extdata</code> folder.</p>
 </div>
-<div id="installation-of-packages" class="section level2">
-<h2>Installation of packages</h2>
+<div id="from-the-books-backcover" class="section level2">
+<h2>From the book’s backcover</h2>
+<p><em>Learning a computer language like R can be either frustrating, fun or boring. Having fun requires challenges that wake up the learner’s curiosity but also provide an emotional reward on overcoming them. The book is designed so that it includes smaller and bigger challenges, in what I call playgrounds, in the hope that all readers will enjoy their path to R fluency. Fluency in the use of a language is a skill that is acquired through practice and exploration. Although rarely mentioned separately, fluency in a computer programming language involves both writing and reading. The parallels between natural and computer languages are many but differences are also important. For students and professionals in the biological sciences, humanities and many applied fields, recognizing the parallels between R and natural languages should help them feel at home with R. The approach I use is similar to that of a travel guide, encouraging exploration and describing the available alternatives and how to reach them. The intention is to guide the reader through the R landscape of 2020 and beyond.</em></p>
+</div>
+<div id="installation-of-this-package" class="section level2">
+<h2>Installation of this package</h2>
 <p>Installation of the package itself is not different to that of any other package available through CRAN.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;learnrbook&quot;</span>)</span></code></pre></div>
-<p>In the code examples in the book I use several packages available from CRAN,. They are loaded in a code chunck at the start of chapters 6, 7, and 8, where they are used. To facilitate their installation and use, vectors containing package names are provided.</p>
+</div>
+<div id="loading-the-package" class="section level2">
+<h2>Loading the package</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(learnrbook)</span></code></pre></div>
+</div>
+<div id="installation-of-packages-used-in-the-book" class="section level2">
+<h2>Installation of packages used in the book</h2>
+<p>In the code examples in the book I use several packages available from CRAN. They are loaded in a code chunk at the start of chapters 6, 7, and 8, where they are used. To facilitate their installation and use, vectors containing package names are provided.</p>
 <p>To install all the packages used in the book you can use.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">install.packages</span>(learnrbook<span class="op">::</span>pkgs_all)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">install.packages</span>(learnrbook<span class="op">::</span>pkgs_all)</span></code></pre></div>
 <p>If you rather install only the packages used in a given chapter, for example, chapter 7 on the <em>Gramamr of Graphics</em> it is possible to install only these.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">install.packages</span>(learnrbook<span class="op">::</span>pkgs_ch_graphics)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">install.packages</span>(learnrbook<span class="op">::</span>pkgs_ch_graphics)</span></code></pre></div>
+<p>To install only the packages that are missing.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>intalled_pkgs &lt;-<span class="st"> </span><span class="kw">installed.packages</span>()[ , <span class="dv">1</span>]</span>
+<span id="cb5-2"><a href="#cb5-2"></a>missing_pkgs &lt;-<span class="st"> </span><span class="kw">setdiff</span>(learnrbook<span class="op">::</span>pkgs_all, intalled_pkgs)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="cf">if</span> (<span class="kw">length</span>(missing_pkgs) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) {</span>
+<span id="cb5-4"><a href="#cb5-4"></a> <span class="kw">install.packages</span>(missing_pkgs)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>}</span></code></pre></div>
+</div>
+<div id="use-of-r-data-objects" class="section level2">
+<h2>Use of R data objects</h2>
+<p>Please, see the individual help pages for additional details on the data sets.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">help</span>(<span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">data</span>(<span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)</span></code></pre></div>
+<p>Display the top six rows.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">head</span>(viikki_d29.dat)</span></code></pre></div>
+<pre><code>##            solar_time WindDir_D1_WVT WindSpd_S_WVT
+## 1 2016-07-29 00:00:27         64.680         0.767
+## 2 2016-07-29 00:01:27         22.660         0.733
+## 3 2016-07-29 00:02:27          7.946         1.142
+## 4 2016-07-29 00:03:27         19.320         1.333
+## 5 2016-07-29 00:04:27        348.700         1.033
+## 6 2016-07-29 00:05:27        323.000         0.967</code></pre>
 </div>
 <div id="use-of-examples-files" class="section level2">
 <h2>Use of examples files</h2>
-<p>Example files are installed in folder <code>extdata</code> under the root folder of the installed package. The location and path to where a package is installed is dependent on the operating system and account settings, and the settings in the <code>.Rprofile</code> file. However, R provides a simple way for finding the path to this folder.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)</span></code></pre></div>
+<p>Example files are installed in folder <code>extdata</code> under the root folder of the installed package. The location and path to where a package is installed is dependent on the operating system and account settings, and on the settings in the <code>.Rprofile</code> file. However, R provides a simple way of finding the path to this folder.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)</span></code></pre></div>
 <p>We can also easily get a list of the available example files.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>path2examples &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">list.files</span>(path2examples)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>path2examples &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;learnrbook&quot;</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="kw">list.files</span>(path2examples)</span></code></pre></div>
 <pre><code>##  [1] &quot;BIRCH1.SYS&quot;                   &quot;Book1.ods&quot;                   
 ##  [3] &quot;Book1.xlsx&quot;                   &quot;GPSDATA-large.gpx&quot;           
 ##  [5] &quot;GPSDATA.gpx&quot;                  &quot;aligned-ASCII-UK.csv&quot;        
 ##  [7] &quot;aligned-ASCII.fwf&quot;            &quot;aligned-ASCII.txt&quot;           
-##  [9] &quot;areatable.dat&quot;                &quot;dwtable.dat&quot;                 
-## [11] &quot;logger_1.txt&quot;                 &quot;meteo-data.nc&quot;               
-## [13] &quot;miss-aligned-ASCII-shift.txt&quot; &quot;miss-aligned-ASCII.txt&quot;      
-## [15] &quot;my-data.sav&quot;                  &quot;my-data.xlsx&quot;                
-## [17] &quot;my-file.csv&quot;                  &quot;my-file1.csv&quot;                
-## [19] &quot;my-file2.csv&quot;                 &quot;my-file2.txt&quot;                
-## [21] &quot;my-file3.txt&quot;                 &quot;my-file4.txt&quot;                
-## [23] &quot;my-file5.tsv&quot;                 &quot;my-file5.txt&quot;                
-## [25] &quot;my-file6.csv&quot;                 &quot;my-file7.txt&quot;                
-## [27] &quot;not-aligned-ASCII-UK.csv&quot;     &quot;not-aligned-ASCII.txt&quot;       
-## [29] &quot;pet_ltm.nc&quot;                   &quot;pevpr.sfc.mon.ltm.nc&quot;        
-## [31] &quot;thiamin.sav&quot;</code></pre>
+##  [9] &quot;areatable.dat&quot;                &quot;cloudindex.idx&quot;              
+## [11] &quot;dwtable.dat&quot;                  &quot;logger_1.txt&quot;                
+## [13] &quot;meteo-data.nc&quot;                &quot;miss-aligned-ASCII-shift.txt&quot;
+## [15] &quot;miss-aligned-ASCII.txt&quot;       &quot;my-data.sav&quot;                 
+## [17] &quot;my-data.xlsx&quot;                 &quot;my-file.csv&quot;                 
+## [19] &quot;my-file1.csv&quot;                 &quot;my-file2.csv&quot;                
+## [21] &quot;my-file2.txt&quot;                 &quot;my-file3.txt&quot;                
+## [23] &quot;my-file4.txt&quot;                 &quot;my-file5.tsv&quot;                
+## [25] &quot;my-file5.txt&quot;                 &quot;my-file6.csv&quot;                
+## [27] &quot;my-file7.txt&quot;                 &quot;my-script.R&quot;                 
+## [29] &quot;not-aligned-ASCII-UK.csv&quot;     &quot;not-aligned-ASCII.txt&quot;       
+## [31] &quot;pet_ltm.nc&quot;                   &quot;pevpr.sfc.mon.ltm.nc&quot;        
+## [33] &quot;rcatsidx.idx&quot;                 &quot;rindex.idx&quot;                  
+## [35] &quot;thiamin.sav&quot;                  &quot;using-r-main-crc.idx&quot;</code></pre>
 <p>The formats of these files are:</p>
 <table>
 <thead>
@@ -410,10 +460,16 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <td align="left">text</td>
 <td align="left">R script file</td>
 </tr>
+<tr class="even">
+<td align="left">.idx</td>
+<td align="left">text</td>
+<td align="left"><span class="math inline">\(\LaTeX\)</span> index</td>
+</tr>
 </tbody>
 </table>
-<p>Most data files are used in Chapter 8 <em>Data Input and Output</em>. The R script example in Chapter 3 <em>The R language: “Paragraphs” and “essays”</em></p>
-<p>The sources of the data in these files, and a short descriptions of the data follows. However, see the individual help pages for additional details on the data sets.</p>
+<p>Most data files are used in Chapter 8 <em>Data Input and Output</em>.</p>
+<p>The example R script is used in Chapter 3 <em>The R language: “Paragraphs” and “essays”</em></p>
+<p>The sources of the data in these files, and a short descriptions of the data follows for those files that contain real data.</p>
 <table>
 <thead>
 <tr class="header">
@@ -431,56 +487,55 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <td>Aphalo and Rikala (2002)</td>
 </tr>
 <tr class="even">
-<td align="left">Book1.xlsx</td>
-<td align="left">2017</td>
-<td align="left">artificial data</td>
-<td>Original</td>
-</tr>
-<tr class="odd">
 <td align="left">logger_1.txt</td>
 <td align="left">2016</td>
 <td align="left">from Yocto Puce datalogger</td>
 <td>Original, P. J. Aphalo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">meteo-data.nc</td>
 <td align="left">2017</td>
 <td align="left">meteorological</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td align="left">my-data.sav</td>
-<td align="left"></td>
-<td align="left">artificial</td>
-<td></td>
-</tr>
 <tr class="even">
-<td align="left">my-data.xlsx</td>
-<td align="left"></td>
-<td align="left">artificial</td>
-<td></td>
-</tr>
-<tr class="odd">
 <td align="left">pet_ltm.nc</td>
 <td align="left">2014</td>
 <td align="left">meteorological</td>
 <td>Data of Anders Lindfors, FMI</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">pevpr.sfc.mon.ltm.nc</td>
 <td align="left">????</td>
 <td align="left">????</td>
 <td>????</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">thiamin.sav</td>
 <td align="left">????</td>
 <td align="left"></td>
 <td></td>
 </tr>
+<tr class="odd">
+<td align="left">rindex.idx</td>
+<td align="left">2020</td>
+<td align="left">word list with markup</td>
+<td>alphabetical R index</td>
+</tr>
+<tr class="even">
+<td align="left">rcatsidx.idx</td>
+<td align="left">2020</td>
+<td align="left">word list with markup</td>
+<td>R index by categories</td>
+</tr>
+<tr class="odd">
+<td align="left">cloudindex.idx</td>
+<td align="left">2020</td>
+<td align="left">word list with minimal markup</td>
+<td>word cloud on the cover</td>
+</tr>
 </tbody>
 </table>
-<p><em>currently incomplete list</em></p>
 </div>
 
 

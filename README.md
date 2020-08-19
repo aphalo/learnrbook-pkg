@@ -8,14 +8,14 @@ version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-projec
 
 ## Purpose
 
-Package ‘**learnrbook**’ comtains data in R objects and in foreign files
+Package ‘learnrbook’ contains data in R objects and in foreign files
 used as examples in the book “Learn R: As a Language” by Pedro J.
 Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533 (pbk);
 ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk); DOI
 [10.1201/9780429060342](https://doi.org/10.1201/9780429060342).
 
-In addition this package exports as character vectors the names of the
-packages used in the book, so as to make it easier to install them.
+This package also exports as character vectors the names of the packages
+used in the book, so as to make it easier to install them.
 
 ![](man/figures/cover-9780367182533-small.png)
 
@@ -31,7 +31,7 @@ Installation of the current unstable version from Bitbucket:
 
 ``` r
 # install.packages("devtools")
-devtools::install_bitbucket("aphalo/learnrbook")
+devtools::install_bitbucket("aphalo/learnrbook-pkg")
 ```
 
 ## Documentation
@@ -45,8 +45,8 @@ News about updates are regularly posted at
 ## Contributing
 
 Please report bugs and request new features at
-(<https://bitbucket.org/aphalo/learnrbook/issues>). Pull requests are
-welcome at (<https://bitbucket.org/aphalo/learnrbook>).
+(<https://bitbucket.org/aphalo/learnrbook-pkg/issues>). Pull requests
+are welcome at (<https://bitbucket.org/aphalo/learnrbook-pkg>).
 
 ## Citation
 
@@ -56,12 +56,13 @@ publications, please cite according to:
 ``` r
 citation("learnrbook")
 #> 
-#> Aphalo P (????). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
-#> Book_. R package version 1.0.0, <URL:
+#> Aphalo P (2020). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
+#> Book_. R package version 1.0.1, <URL:
 #> https://CRAN.R-project.org/package=learnrbook>.
 #> 
 #> Aphalo P (2020). _Learn R: As a Language_, series R Series. Chapman and
-#> Hall/CRC, New York. ISBN 9780367182533, <URL:
+#> Hall/CRC, New York. ISBN 9780367182533, doi: 10.1201/9780429060342
+#> (URL: https://doi.org/10.1201/9780429060342), <URL:
 #> https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533>.
 #> 
 #> To see these entries in BibTeX format, use 'print(<citation>,

@@ -39,7 +39,7 @@ pkgs_ch_data_io <-
     "dplyr",
     "tidyr",
     "readr",
-    "reasdxl",
+    "readxl",
     "xlsx",
     "readODS",
     "pdftools",
