@@ -36,37 +36,6 @@ a travel guide, encouraging exploration and describing the available
 alternatives and how to reach them. The intention is to guide the reader
 through the R landscape of 2020 and beyond.
 
-What will you find in this book?
-
--   R as it is currently used.
-
--   Few prescriptive rules, mostly the author’s preferences together
-    with alternatives.
-
--   Explanation of the R grammar emphasizing the “R way of doing
-    things”.
-
--   Tutoring for “programming in the small” using scripts.
-
--   The grammar of graphics and the grammar of data described as
-    grammars.
-
--   Examples of data exchange between R and the foreign world using
-    common file formats.
-
--   Coaching for becoming an independent R user, capable writing
-    original code and of solving future challenges.
-
-What makes this book different to others?
-
--   Tries to break the ice and help readers from all disciplines feel at
-    home with R.
-
--   It does not make assumptions about what the reader will use R for.
-
--   It attempts to do only one thing well: guide readers into becoming
-    fluent in the R language.
-
 **Pedro J. Aphalo** is a PhD graduate from the University of Edinburgh,
 currently lecturer at the University of Helsinki. A plant biologist and
 agriculture scientist with a passion for data, electronics, computers
@@ -76,8 +45,6 @@ of 13 R packages currently in CRAN.
 
 ORCID:
 [0000-0003-3385-972X](https://orcid.org/0000-0003-3385-972X "public ORCID profile")
-
-<img src="man/figures/cover-small.png" width="250"/>
 
 ## Installation
 
@@ -105,15 +72,17 @@ News about updates are regularly posted at
 ## Contributing to the package
 
 Please report bugs and request new features at
-<https://bitbucket.org/aphalo/learnrbook-pkg/issues>. Pull requests are
-welcome at <https://bitbucket.org/aphalo/learnrbook-pkg>.
+<https://github.com/aphalo/learnrbook-pkg/issues> . Pull requests are
+welcome at <https://github.com/aphalo/learnrbook-pkg>.
 
 ## Contributing to the book
 
-The book manuscript itself is in a public Git repository. Please, report
+The book manuscript itself is in a public Git repository and suggestions
+for improvements are very welcome. They will be listed as errata and
+incorporated into later editions and acknowledged. Please, report
 errors, unclear text passages, and outdated code examples at
-<https://bitbucket.org/aphalo/learnrbook-book/issues>. Pull requests are
-welcome at <https://bitbucket.org/aphalo/learnrbook-book>.
+<https://github.com/aphalo/learnrbook-book/issues>. Pull requests are
+welcome at <https://github.com/aphalo/learnrbook-book>.
 
 ## Citation
 
@@ -123,8 +92,8 @@ publications, please cite according to:
 ``` r
 citation("learnrbook")
 #> 
-#> Aphalo P (2020). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
-#> Book_. R package version 1.0.1, <URL:
+#> Aphalo P (2021). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
+#> Book_. R package version 1.0.1.9000, <URL:
 #> https://CRAN.R-project.org/package=learnrbook>.
 #> 
 #> Aphalo P (2020). _Learn R: As a Language_, series R Series. Chapman and
@@ -139,6 +108,6 @@ citation("learnrbook")
 
 ## License
 
-© 2018-2020 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
+© 2018-2021 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
 the GPL, version 2 or greater. This software carries no warranty of any
 kind.

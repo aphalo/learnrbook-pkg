@@ -32,10 +32,8 @@ navbar:
       text: Reference
       href: reference/index.html
     articles:
-      text: Articles
-      menu:
-      - text: Installation and use
-        href: articles/installation.html
+      text: User Guide
+      href: articles/user-guide.html
     tutorials:
       text: Resources
       menu:
