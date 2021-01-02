@@ -3,7 +3,7 @@
 \docType{data}
 \name{pkgs_ch_data}
 \alias{pkgs_ch_data}
-\title{Packages used in Ch. 6 of book "Learn R: As a Language"}
+\title{Packages used in ch. 6 of book "Learn R: As a Language"}
 \format{
 A vector of character strings.
 }

@@ -11,7 +11,7 @@
 #'
 "pkgs_all"
 
-#' Packages used in Ch. 6 of book "Learn R: As a Language"
+#' Packages used in ch. 6 of book "Learn R: As a Language"
 #'
 #' Character vector of package names for chapter 6 "New grammars of data".
 #'
