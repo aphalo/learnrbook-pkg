@@ -9,7 +9,7 @@ version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-projec
 ## Purpose
 
 Package ‘learnrbook’ contains data in R objects and in foreign files
-used as examples in the book “Learn R: As a Language” by Pedro J.
+used as examples in the book ***Learn R: As a Language*** by Pedro J.
 Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533 (pbk);
 ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk); DOI
 [10.1201/9780429060342](https://doi.org/10.1201/9780429060342).
@@ -74,6 +74,9 @@ and photography in addition to plants. A user of R for 25 years, who
 first organized an R course for MSc students 18 years ago and the author
 of 13 R packages currently in CRAN.
 
+ORCID:
+[0000-0003-3385-972X](https://orcid.org/0000-0003-3385-972X "public ORCID profile")
+
 <img src="man/figures/cover-small.png" width="250"/>
 
 ## Installation
@@ -94,16 +97,23 @@ devtools::install_bitbucket("aphalo/learnrbook-pkg")
 ## Documentation
 
 HTML documentation is available at
-(<https://docs.r4photobiology.info/learnrbook/>).
+<https://docs.r4photobiology.info/learnrbook/>.
 
 News about updates are regularly posted at
-(<https://www.r4photobiology.info/>).
+<https://www.r4photobiology.info/>.
 
-## Contributing
+## Contributing to the package
 
 Please report bugs and request new features at
-(<https://bitbucket.org/aphalo/learnrbook-pkg/issues>). Pull requests
-are welcome at (<https://bitbucket.org/aphalo/learnrbook-pkg>).
+<https://bitbucket.org/aphalo/learnrbook-pkg/issues>. Pull requests are
+welcome at <https://bitbucket.org/aphalo/learnrbook-pkg>.
+
+## Contributing to the book
+
+The book manuscript itself is in a public Git repository. Please, report
+errors, unclear text passages, and outdated code examples at
+<https://bitbucket.org/aphalo/learnrbook-book/issues>. Pull requests are
+welcome at <https://bitbucket.org/aphalo/learnrbook-book>.
 
 ## Citation
 

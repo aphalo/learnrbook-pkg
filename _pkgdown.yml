@@ -1,2 +1,47 @@
 destination: ../learnr-docs
 url: https://docs.r4photobiology.info/learnr/
+
+reference:
+- title: All functions
+  contents:
+  - '`clean1000.df`'
+  - '`clean5000.df`'
+  - '`learnrbook-package`'
+  - '`pkgs_all`'
+  - '`pkgs_ch_data`'
+  - '`pkgs_ch_data_io`'
+  - '`pkgs_ch_graphics`'
+  - '`viikki_d29.dat`'
+  - '`weather_wk_25_2019.tb`'
+
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    right: github
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Installation and use
+        href: articles/installation.html
+    tutorials:
+      text: Resources
+      menu:
+      - text: Blog on R by Pedro J. Aphalo
+        href: https://www.r4photobiology.info/
+      - text: R packages by Pedro J. Aphalo
+        href: https://www.r4photobiology.info/package-status/
+      - text: The word cloud on the cover explained
+        href: https://www.r4photobiology.info/2020/08/word-cloud-figure/

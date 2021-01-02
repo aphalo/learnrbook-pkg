@@ -74,13 +74,17 @@ devtools::install_bitbucket("aphalo/learnrbook-pkg")
 
 ## Documentation
 
-HTML documentation is available at (<https://docs.r4photobiology.info/learnrbook/>).
+HTML documentation is available at <https://docs.r4photobiology.info/learnrbook/>.
 
-News about updates are regularly posted at (<https://www.r4photobiology.info/>).
+News about updates are regularly posted at <https://www.r4photobiology.info/>.
 
-## Contributing
+## Contributing to the package
 
-Please report bugs and request new features at (<https://bitbucket.org/aphalo/learnrbook-pkg/issues>). Pull requests are welcome at (<https://bitbucket.org/aphalo/learnrbook-pkg>).
+Please report bugs and request new features at <https://github.com/aphalo/learnrbook-pkg/issues> . Pull requests are welcome at <https://github.com/aphalo/learnrbook-pkg>.
+
+## Contributing to the book
+
+The book manuscript itself is in a public Git repository and suggestions for improvements are very welcome. They will be listed as errata and incorporated into later editions and acknowledged. Please, report errors, unclear text passages, and outdated code examples at <https://github.com/aphalo/learnrbook-book/issues>. Pull requests are welcome at <https://github.com/aphalo/learnrbook-book>.
 
 ## Citation
 
