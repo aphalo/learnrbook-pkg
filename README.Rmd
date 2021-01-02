@@ -23,9 +23,16 @@ Package 'learnrbook' contains data in R objects and in foreign files used as exa
 
 This package also exports as character vectors the names of the packages used in the book, so as to make it easier to install them.
 
-## From the back cover of "Learn R: As a Language"
+## The book "Learn R: As a Language"
 
 Learning a computer language like R can be either frustrating, fun or boring. Having fun requires challenges that wake up the learner's curiosity but also provide an emotional reward on overcoming them. The book is designed so that it includes smaller and bigger challenges, in what I call playgrounds, in the hope that all readers will enjoy their path to R fluency. Fluency in the use of a language is a skill that is acquired through practice and exploration. Although rarely mentioned separately, fluency in a computer programming language involves both writing and reading. The parallels between natural and computer languages are many but differences are also important. For students and professionals in the biological sciences, humanities and many applied fields, recognizing the parallels between R and natural languages should help them feel at home with R. The approach I use is similar to that of a travel guide, encouraging exploration and describing the available alternatives and how to reach them. The intention is to guide the reader through the R landscape of 2020 and beyond.
+
+**Aphalo P J**. 2020. *Learn R: As a Language.* CRC/Taylor & Francis Ltd. 364 pp. ISBN 9780367182533
+(Paperback), ISBN 9780367182557 (Hardback), ISBN 9780429060342 (eBook).
+
+Find a copy in a library: <https://www.worldcat.org/title/learn-r-as-a-language/oclc/1193108001>
+
+Buy a copy from the publisher: <https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533>
 
 **Pedro J. Aphalo** is a PhD graduate from the University of Edinburgh, currently lecturer at the University of Helsinki. A plant biologist and agriculture scientist with a passion for data, electronics, computers and photography in addition to plants. A user of R for 25 years, who first organized an R course for MSc students 18 years ago and the author of 13 R packages currently in CRAN.
 
