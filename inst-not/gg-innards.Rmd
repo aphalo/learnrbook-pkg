@@ -1,0 +1,251 @@
+---
+title: "A. ggplot Innards"
+subtitle: "An supplement to the book 'Learn R: As a Language'"
+author: "Pedro J. Aphalo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{A. ggplot Innards}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE, echo=FALSE}
+library(knitr)
+opts_chunk$set(fig.align = 'center', 
+               fig.show = 'hold', fig.width = 7, fig.height = 4)
+options(warnPartialMatchArgs = FALSE,
+        tibble.print.max = 4,
+        tibble.print.min = 4,
+        dplyr.summarise.inform = FALSE)
+```
+
+## Aims of this Appendix
+
+*ggplot* objects are not plots, they do not contain vector or bitmap graphics. Instead they contain the data plus an abstract description of a plot. ggplot objects need to be *rendered* in a *device* to obtain the final visual representation. Knowing how *ggplot* objects are structured is useful not only when developing extensions to 'ggplot2' but also when we need to produce plots with a consistent graphical design and reproducible handling of the data.
+
+Conceptually, ggplots are constructed layer by layer using the grammar of graphics and the order in which layers are added matches the order in which the layers are rendered when the graphical output is generated. This conceptual ordering of layers in the plot corresponds to their position in the list object used to store the "instructions". This object is a list of lists with tree-like structure and a consistent arrangement of branches. Something to remember is that a significant amount of information is stored positionally: the order of layers and order of precedence of arguments.
+
+In other words, how ggplot objects are structured is consistent with the grammar of graphics used to specify a plot. In other words they can be thought as being modular, assembled from various pieces in a certain order. In this Appendix we will learn how to explore the innards of ggplots, how to "prefabricate" customized ggplot components and how to modify or edit *ggplot* objects.
+
+## Preliminaries
+
+We will use packages 'gginnards' and 'ggplot2'.
+
+```{r}
+library(ggplot2)
+library(gginnards)
+```
+
+## Exploring the structure
+
+We will revisit some of the examples from Chapter 7 *Grammar of graphics*, but instead of considering the rendered plots, we will explore the R objects.
+
+```{r}
+p <- ggplot()
+names(p)
+```
+
+Each the different components has its own slot. We have an empty ggplot, let's look at its structure. Let's look at the first two.
+
+```{r}
+str(p[c(1, 2)])
+```
+
+They are empty. Let's try after adding `data`, `mapping` and a `layer`.
+
+```{r}
+p <- ggplot(data = mtcars,
+            mapping = aes(x = disp, y = mpg)) +
+  geom_point()
+names(p)
+```
+
+Names remain unchaged, but have they changed?
+
+```{r}
+str(p[c(1, 2)])
+```
+
+Now we have data and a layer! These two slots in the list have been filled.
+
+We can render this simple plot into a bitmap by printing it. To simplify the output we use a simpler theme than the default.
+
+```{r}
+p <- p + theme_minimal()
+print(p)
+```
+
+We can also render it into a Grid graphic object or grob instead. The generation of grobs is always an intermediate step in the rendering of a ggplot. This grob can be passed to different graphic devices to obtain graphica output in different formats.
+
+```{r}
+grb <- ggplotGrob(p)
+class(grb)
+```
+
+```{r}
+names(grb)
+```
+
+From the names of the slots it is clear that these are "drawing" instructions. The data. mappings, theme, etc. are all gone.
+
+## Editing ggplot objects
+
+So, going back to the ggplot object `p`, we may want to know what would happen if we "break the rules of the grammar" and, say edit the data component stored inside `p`. Let's see! If you do not remember how to manipulate lists and data frames you may need to consult Chapter XX.
+
+```{r}
+p$data$mpg <- p$data$mpg * 100
+p
+```
+
+Indeed, the plot now shows the modified data. This so, because as mentiones above, the ggplot object contains only data and instructions, which are used only at the time of rendering the plot.
+
+So can we remove rows from data?
+
+```{r}
+p$data <- p$data[5:15, ]
+p
+```
+
+Yes, we can! Can we replace the data?
+
+```{r}
+p$data <- mtcars[ , c("mpg", "disp")]
+p
+```
+
+Yes, we can! As seen here those variables in data that are not used in the plot are redundant, and can be easily deleted if we know their names. With very large data sets it may useful to reduce the size of the ggplot object in this way.
+
+Even though it is usually more convenient to modify the code used to construct a ggplot using the grammar than to edit a ggplot object, we will give a few examples.
+
+```{r}
+p <- ggplot(data = mtcars,
+            mapping = aes(x = disp, y = mpg)) +
+  geom_point(size = 3)
+colnames(p$data)
+```
+
+Package `gginnards` provides some functions to facilitate the manipulation of ggplot objects. For example `drop_vars()` searches all mappings to find out which variables are in use, and deletes the unused ones.
+
+```{r}
+p <- drop_vars(p)
+colnames(p$data)
+```
+
+Other elements like themes and layers can be also manipulated in the same way. As mentioned above, the order of the layers in the ggplot object determines the order in which they are rendered. Package `gginnards` provides several functions for layers: inserting, deleting, moving up or down, and for finding layers by the name of the statistic or geometry.
+
+```{r}
+num_layers(p)
+```
+
+The plot has only one layer.
+
+```{r}
+p <- p + geom_line(colour = "red", size = 2)
+p$layers
+p
+```
+
+The line is overplotted. We see that it is in position 2, so plotted on top of the points in position 1 in the list of layers.
+
+```{r}
+p <- shift_layers(p, match_type = "GeomLine", shift = -1L)
+p$layers
+p
+```
+
+```{r}
+p <- delete_layers(p, match_type = "GeomLine")
+p$layers
+p
+```
+
+In recent times several packages have been published that use 'ggplot2' internally and return a ggplot `gg` object. In many cases the user of these very convenient packages has limited control on the details of the plot, making the ability to edit them rather useful. The main aim of this section was, however, to show some aspects of the implementation of the grammar of graphics in 'ggplot2' that contribute to a better understanding of how package 'ggplot2' and the many packages providing extenssions work.
+
+## Customized "modules"
+
+This subject was very briefly described in Chapter XXX, sections XXX and XXX. We will give some additional details here. We will look at different approaches to solve the problem of constructing many similar plots consistently. There are variations on this problem: 1) a series of plots maybe done at one time, in which case a script with a for loop over different data sets may be easy to implement (we skip this case and move on), 2) the consistent plots may need to be constructed at different times or by different persons, in which case the best approach is to create some reusable unit.
+
+There are various approaches, the simplest one of which is to collect all the plot components used repeatedly into a list. This is very straightforward but inflexible. Let's imagine that we want to make many similar plots using multiple data sets that are consistently named.
+
+```{r}
+ggplot(data = mtcars,
+            mapping = aes(x = disp, y = mpg, colour = factor(cyl))) +
+  geom_point() +
+  expand_limits(x = 0, y = 0) +
+  theme_bw()
+```
+
+```{r}
+other_elements <- 
+  list(aes(x = disp, y = mpg, colour = factor(cyl)),
+       geom_point(),
+       expand_limits(x = 0, y = 0),
+       theme_bw())
+
+ggplot(data = mtcars) + other_elements
+```
+
+We get exactly the same plot when we first collect all the elements common to multiple plots into a list. This can be very convenient in the case of complex plots.
+
+If we need to control what is in the list used, we need to define a function that returns a list.
+
+```{r}
+
+other_elements <- function(size = 11) {
+  list(aes(x = disp, y = mpg, colour = factor(cyl)),
+       geom_point(),
+       expand_limits(x = 0, y = 0),
+       theme_bw(base_size = size))
+}
+
+ggplot(data = mtcars) + other_elements(16)
+
+```
+
+Remember that R functions can take other R functions as argument.
+
+```{r}
+
+other_elements <- function(theme = theme_bw, size = 11) {
+  list(aes(x = disp, y = mpg, colour = factor(cyl)),
+       geom_point(),
+       expand_limits(x = 0, y = 0),
+       theme(base_size = size))
+}
+
+ggplot(data = mtcars) + other_elements(theme_dark, 9)
+
+```
+
+```{r}
+ggplot(data = mtcars) + other_elements(theme_dark, 9) + theme(axis.title = element_text(colour = "red"))
+```
+
+Of course we can also define a function that constructs the whole plot.
+
+```{r}
+make_plot <- 
+  function(data, size = 11) {
+    ggplot(data = data,
+           mapping = aes(x = disp, y = mpg, colour = factor(cyl))) +
+      geom_point() +
+      expand_limits(x = 0, y = 0) +
+      theme_bw(base_size = size)
+  }
+
+make_plot(data = mtcars)
+```
+
+Sometimes it is useful to make wrappers on individual layer functions or scales, simply to override the defaults with defaults that are specific to a series of plots. Here we combine this with the function defined above.
+
+```{r}
+scale_x_disp <- function(name = "Engine displacement (cubic inch)", ...) {
+  scale_x_continuous(name = name, ...)
+}
+make_plot(data = mtcars) + scale_x_disp(n.breaks = 10)
+```
+
+In the end which approach to use depends on how much of the code used to define the different plots in group or batch remains unchanged but also to a great extent on what approach feels natural to you.
+
+If these "canned" plot components seem generally useful it is worthwhile putting together an R package with them, either for later use by oneself, or to be shared openly. My packages 'ggpmisc', 'ggspectra' and 'gginnards' were built as myself or colleagues needed to make specific types of plots. Those functions that I considered likely to be needed in the future by myself or others are those in the packages. Many were improved based on suggestions or pull requests from various users.

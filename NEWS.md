@@ -1,3 +1,7 @@
+# learnrbook 1.0.2
+
+Minor revision to documentation.
+
 # learnrbook 1.0.1
 
 Version at time of book first availability.
