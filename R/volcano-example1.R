@@ -14,9 +14,12 @@
 #'
 #' @docType data
 #' @keywords datasets
-#' @format A data.frame with 5 columns and row names.
+#' @format A data.frame with 5 columns and 1000 row names.
+#'
+#' @references Neha Rai et al. (2020) Plant Cell and Environment,
+#'    https://doi.org/10.1111/pce.13752.
 #'
 #' @note
-#' Original data.
+#' A subset of size 1000 selected by random sampling,
 #'
 "clean1000.df"

@@ -12,16 +12,19 @@ vignette: >
 
 ## Introduction
 
-This package contains data sets used in the code examples in the book "Learn R 
-...as you learnt your mother tongue" by Pedro J. Aphalo, available at
-<https://leanpub.com/learnr>. The book uses mostly data sets included in the
-R distribution itself and in the packages available through CRAN that are
-described in the book, so few data sets are included as R data in this package. 
-However, to demonstrate the reading of foreign data
-formats I use in the book several files. These files are part of this
-package and installed in the `extdata` folder.
+This package contains data sets used in the code examples in the book "Learn R:
+As a Language" by Pedro J. Aphalo, available at <https://leanpub.com/learnr>.
+The book uses mostly data sets included in the R distribution itself and in
+packages available through CRAN, so few additional data sets are included as R
+data in this package. However, to demonstrate the reading of foreign data
+formats I use in the book several files. These files are part of this package
+and installed in the `extdata` folder.
 
-## Installation of packages
+## From the book's backcover
+
+_Learning a computer language like R can be either frustrating, fun or boring. Having fun requires challenges that wake up the learner’s curiosity but also provide an emotional reward on overcoming them. The book is designed so that it includes smaller and bigger challenges, in what I call playgrounds, in the hope that all readers will enjoy their path to R fluency. Fluency in the use of a language is a skill that is acquired through practice and exploration. Although rarely mentioned separately, fluency in a computer programming language involves both writing and reading. The parallels between natural and computer languages are many but differences are also important. For students and professionals in the biological sciences, humanities and many applied fields, recognizing the parallels between R and natural languages should help them feel at home with R. The approach I use is similar to that of a travel guide, encouraging exploration and describing the available alternatives and how to reach them. The intention is to guide the reader through the R landscape of 2020 and beyond._
+
+## Installation of this package
 
 Installation of the package itself is not different to that of any other
 package available through CRAN.
@@ -30,11 +33,18 @@ package available through CRAN.
 install.packages("learnrbook")
 ```
 
-In the code examples in the book I use more than 40 packages available from 
-CRAN, and three not yet in CRAN but available from Github. They are listed at 
-the start of each chapter. To facilitate their
-installation and use, vectors containing package names used in each chapter of
-the book are provided, as well as a vector will all the names together.
+## Loading the package
+
+```{r}
+library(learnrbook)
+```
+
+## Installation of packages used in the book
+
+In the code examples in the book I use several packages available from 
+CRAN. They are loaded in a code chunk at 
+the start of chapters 6, 7, and 8, where they are used. To facilitate their
+installation and use, vectors containing package names are provided.
 
 To install all the packages used in the book you can use.
 
@@ -42,35 +52,48 @@ To install all the packages used in the book you can use.
 install.packages(learnrbook::pkgs_all)
 ```
 
-If you rather install only the packages used in a given chapter use, for example,
-for theplotting with `ggplot' chapter.
+If you rather install only the packages used in a given chapter, for example,
+chapter 7 on the _Grammar of Graphics_ it is possible to install only these.
 
 ```{r, eval=FALSE}
-install.packages(learnrbook::pkgs_ch_ggplot)
+install.packages(learnrbook::pkgs_ch_graphics)
 ```
 
-Even though three of the packages are not in CRAN, they are all listed in the
-vectors of names in the hope that in the future they will be submitted to CRAN.
-
-An additional vector `pkgs_at_github` provides the paths to the Github repositories for these 
-three packages.
-
-These can be installed as follows.
+To install only the packages that are missing.
 
 ```{r, eval=FALSE}
-# install.packages("devtools")
-for (pkg in learnrbook::pkgs_at_github) {
-  devtools::install_github(pkg)
+intalled_pkgs <- installed.packages()[ , 1]
+missing_pkgs <- setdiff(learnrbook::pkgs_all, intalled_pkgs)
+if (length(missing_pkgs) > 0) {
+ install.packages(missing_pkgs)
 }
+```
+
+## Use of R data objects
+
+Please, see the individual help pages for additional details on the data sets.
+
+```{r, eval=FALSE}
+help(package = "learnrbook")
+```
+
+```{r, eval=FALSE}
+data(package = "learnrbook")
+```
+
+Display the top six rows.
+
+```{r}
+head(viikki_d29.dat)
 ```
 
 ## Use of examples files
 
 Example files are installed in folder `extdata` under the root folder of the
 installed package. The location and path to where a package is installed is
-dependent on the operating system and account settings, and the settings in
-the `.Rprofile` file. However, R provides a simple way for querying this path to
-where the example files are stored.
+dependent on the operating system and account settings, and on the settings in
+the `.Rprofile` file. However, R provides a simple way of finding the path to
+this folder.
 
 ```{r, eval=FALSE}
 system.file("extdata", package = "learnrbook")
@@ -88,31 +111,35 @@ The formats of these files are:
 | File name "tag" | Format | other |
 |:-----------------|:--------|:--------------------------------|
 | .SYS            | Systat | proprietary, format depends on operating system |
-| .tif            | TIFF   | Bitmap, variations exist in bit depth and compression used  |
 | .sav            | SPSS   | proprietary            |
-| .txt            | ASCII  | open                   |
-| .nc             | NetCDF | open                   |
-| .xlsx           | Excell | proprietary, modern, XML based      |
+| .txt            | text   |                        |
+| .fwd            | text   | fixed-width data fields    |
+| .csv            | text  | comma separated fields |
+| .tsv            | text   | tab(ulator) separated values |
+| .gpx            | text   | GPS position data, XML based     |
+| .nc             | NetCDF | binary, with metadata               |
+| .xlsx           | Excel  | "workbooks", XML based and compressed |
+| .ods            | ODS    | non-proprietary, XML based  |
+| .R              | text   | R script file   |
+| .idx            | text   | $\LaTeX$ index |
 
-The files are used in Chapter "Storing and manipulating data with R" and in
-Chapter "Plotting maps and images".
+Most data files are used in Chapter 8 _Data Input and Output_. 
+
+The example R script is used
+ in Chapter 3 _The R language: “Paragraphs” and “essays”_
 
 The sources of the data in these files, and a short descriptions of the data
-follows. However, see the individual help pages for additional details on the data sets.
+follows for those files that contain real data. 
 
 | File           | when saved | Data |Source |
 |:---------------|:-----------|:-----|-----------|
-| BIRCH1.SYS     | 1992       | Birch seeedlings | Aphalo and Rikala (2002) |
-| Book1.xlsx     | 2017       | artificial data | Original |
-| dahlia-uva.tif | 2017       | photograph | Original, P. J. Aphalo |
-| dahlia-vis.tif | 2017       | photograph | Original, P. J. Aphalo |
+| BIRCH1.SYS     | 1992       | Birch seedlings | Aphalo and Rikala (2002) |
 | logger_1.txt   | 2016       | from Yocto Puce datalogger | Original, P. J. Aphalo |
-| meteo-data.nc  | 2017       | meteorological | see help for source |
-| my-data.sav    |        | artificial |       |
-| my-data.xlsx   |        | artificial |       |
-| pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors |
+| meteo-data.nc  | 2017       | meteorological |            |
+| pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors, FMI |
 | pevpr.sfc.mon.ltm.nc | ???? | ???? | ???? |
 | thiamin.sav    | ????       |           |         |
-
-
+| rindex.idx     | 2020       | word list with markup | alphabetical R index |
+| rcatsidx.idx   | 2020       | word list with markup | R index by categories |
+| cloudindex.idx | 2020       | word list with minimal markup | word cloud on the cover |
 

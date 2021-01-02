@@ -1,12 +1,21 @@
-citHeader("To cite package 'learnrbook' in publications, please use:")
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
 
-citEntry(entry = "book",
-  author = "Pedro J. Aphalo",
-  title = "Learn R ...as you learnt your mother tongue",
-  publisher = "Leanpub",
-  pages = "522",
-  year = "2017",
-  url = "https://leanpub.com/learnr",
-  textVersion = "Aphalo, Pedro J. (2017) Learn R ...as you learnt your mother tongue. Leanpub.
-  <https://leanpub.com/learnr>."
-)
+bibentry(bibtype = "Manual",
+         title = "{learnrbook}: Datasets for P. J. Aphalo's \"Learn R\" Book",
+         author = c(person("Pedro J.", "Aphalo")),
+         year = year,
+         note = note,
+         url = "https://CRAN.R-project.org/package=learnrbook")
+
+bibentry(bibtype = "Book",
+         title = "Learn R: As a Language",
+         booktitle = "{Learn R: As a Language",
+         author = c(person("Pedro J.", "Aphalo")),
+         year = 2020,
+         isbn = "9780367182533",
+         doi = "10.1201/9780429060342",
+         series = "R Series",
+         publisher = "Chapman and Hall/CRC",
+         address = "New York",
+         url = "https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533")
