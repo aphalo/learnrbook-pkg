@@ -1,6 +1,6 @@
-#' Packages used in book "Learn R ...as you learnt your mother tongue"
+#' Packages used in book "Learn R: As a Language"
 #'
-#' Character vector of package names for whole book.
+#' Character vector of package names for the whole book.
 #'
 #' @docType data
 #' @keywords datasets
@@ -11,9 +11,9 @@
 #'
 "pkgs_all"
 
-#' Packages used in book "Learn R ...as you learnt your mother tongue"
+#' Packages used in Ch. 6 of book "Learn R: As a Language"
 #'
-#' Character vector of package names for chapter "Storing and manipulating data with R".
+#' Character vector of package names for chapter 6 "New grammars of data".
 #'
 #' @docType data
 #' @keywords datasets
@@ -24,69 +24,28 @@
 #'
 "pkgs_ch_data"
 
-#' Packages used in book "Learn R ...as you learnt your mother tongue"
+#' Packages used in ch. 7 of book "Learn R: As a Language"
 #'
-#' Character vector of package names for chapter "Plots with ggpplot".
-#'
-#' @docType data
-#' @keywords datasets
-#' @format A vector of character strings.
-#'
-#' @examples
-#' pkgs_ch_ggplot
-#'
-"pkgs_ch_ggplot"
-
-#' Packages used in book "Learn R ...as you learnt your mother tongue"
-#'
-#' Character vector of package names for chapter "Extensions to ggplot".
+#' Character vector of package names for chapter 7 "Grammar of graphics".
 #'
 #' @docType data
 #' @keywords datasets
 #' @format A vector of character strings.
 #'
 #' @examples
-#' pkgs_ch_ggplotext
+#' pkgs_ch_graphics
 #'
-"pkgs_ch_ggplotext"
+"pkgs_ch_graphics"
 
-#' Packages used in book "Learn R ...as you learnt your mother tongue"
+#' Packages used in ch. 8 of book "Learn R: As a Language"
 #'
-#' Character vector of package names for chapter "Plotting maps and images".
+#' Character vector of package names for chapter 8 "Data import and export".
 #'
 #' @docType data
 #' @keywords datasets
 #' @format A vector of character strings.
 #'
 #' @examples
-#' pkgs_ch_maps_raster
+#' pkgs_ch_data_io
 #'
-"pkgs_ch_maps_raster"
-
-#' Packages used in book "Learn R ...as you learnt your mother tongue"
-#'
-#' Character vector of package names for chapter "If and when R needs help".
-#'
-#' @docType data
-#' @keywords datasets
-#' @format A vector of character strings.
-#'
-#' @examples
-#' pkgs_ch_performance
-#'
-"pkgs_ch_performance"
-
-#' Packages used in book "Learn R ...as you learnt your mother tongue"
-#'
-#' Character vector of package used in the book, which at the time of writing
-#' are available only from Github.
-#'
-#' @docType data
-#' @keywords datasets
-#' @format A vector of character strings.
-#'
-#' @examples
-#' pkgs_at_github
-#'
-"pkgs_at_github"
-
+"pkgs_ch_data_io"

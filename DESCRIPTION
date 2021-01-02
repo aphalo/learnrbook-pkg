@@ -1,28 +1,29 @@
 Package: learnrbook
 Type: Package
-Title: Datasets for Aphalo's "Learn R" Book
-Version: 0.0.2.9002
-Date: 2019-10-13
+Title: Datasets for P. J. Aphalo's "Learn R" Book
+Version: 1.0.1
+Date: 2020-08-19
 Authors@R:
    c(
-    person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"))
+    person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3385-972X"))
     )
 Maintainer: Pedro J. Aphalo <pedro.aphalo@helsinki.fi>
-Description: Datasets used in the book "Learn R ...as you learnt your mother
-    tongue" by Pedro J. Aphalo (2017) <https://leanpub.com/learnr>.
+Description: Data used in code examples in the book "Learn R: As a Language" by 
+   Pedro J. Aphalo. ISBN 9780367182533 (pbk); ISBN 9780367182557 (hbk); 
+   ISBN 9780429060342 (ebk).
 License: GPL (>= 2)
 LazyLoad: yes
 LazyData: yes
 ByteCompile: yes
 Depends:
-    R (>= 3.3.0)
+    R (>= 3.6.0)
 Suggests:
     roxygen2 (>= 6.0.1),
     knitr (>= 1.15.1),
     devtools (>= 1.12.0),
     rmarkdown (>= 1.5)
-URL: https://leanpub.com/learnr, http://www.r4photobiology.info/
-BugReports: https://bitbucket.org/aphalo/learnr-pkg/issues
+URL: https://docs.r4photobiology.info/learnrbook/
+BugReports: https://bitbucket.org/aphalo/learnrbook-pkg/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1

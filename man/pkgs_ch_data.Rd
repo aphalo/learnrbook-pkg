@@ -3,13 +3,15 @@
 \docType{data}
 \name{pkgs_ch_data}
 \alias{pkgs_ch_data}
-\title{Packages used in book "Learn R ...as you learnt your mother tongue"}
-\format{A vector of character strings.}
+\title{Packages used in Ch. 6 of book "Learn R: As a Language"}
+\format{
+A vector of character strings.
+}
 \usage{
 pkgs_ch_data
 }
 \description{
-Character vector of package names for chapter "Storing and manipulating data with R".
+Character vector of package names for chapter 6 "New grammars of data".
 }
 \examples{
 pkgs_ch_data
