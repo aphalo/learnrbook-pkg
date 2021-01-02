@@ -53,7 +53,7 @@ install.packages(learnrbook::pkgs_all)
 ```
 
 If you rather install only the packages used in a given chapter, for example,
-chapter 7 on the _Gramamr of Graphics_ it is possible to install only these.
+chapter 7 on the _Grammar of Graphics_ it is possible to install only these.
 
 ```{r, eval=FALSE}
 install.packages(learnrbook::pkgs_ch_graphics)
@@ -133,7 +133,7 @@ follows for those files that contain real data.
 
 | File           | when saved | Data |Source |
 |:---------------|:-----------|:-----|-----------|
-| BIRCH1.SYS     | 1992       | Birch seeedlings | Aphalo and Rikala (2002) |
+| BIRCH1.SYS     | 1992       | Birch seedlings | Aphalo and Rikala (2002) |
 | logger_1.txt   | 2016       | from Yocto Puce datalogger | Original, P. J. Aphalo |
 | meteo-data.nc  | 2017       | meteorological |            |
 | pet_ltm.nc     | 2014       | meteorological | Data of Anders Lindfors, FMI |

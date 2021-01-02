@@ -6,9 +6,9 @@
 \alias{learnrbook-package}
 \title{learnrbook: Datasets for P. J. Aphalo's "Learn R" Book}
 \description{
-Package '**learnrbook**' comtains data in R objects and in foreign 
-   files used as examples in the book "Learn R: As a Language" by Pedro J. Aphalo.
-   ISBN 9780367182533 (pbk); ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk).
+Data used in code examples in the book "Learn R: As a Language" by 
+   Pedro J. Aphalo. ISBN 9780367182533 (pbk); ISBN 9780367182557 (hbk); 
+   ISBN 9780429060342 (ebk).
 }
 \details{
 Package 'learnr' is a companion to the book Aphalo, P. (2020). Learn R. New
