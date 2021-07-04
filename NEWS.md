@@ -1,6 +1,9 @@
 # learnrbook 1.0.2
 
-Minor revision to documentation.
+Version released one year after book publication.
+
+-   Add purl output for all code chunks included in the book in file `purl-output.zip`.
+-   Revise and expand documentation.
 
 # learnrbook 1.0.1
 

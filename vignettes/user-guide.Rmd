@@ -147,16 +147,28 @@ data follows for those files that contain real data.
 | rcatsidx.idx         | 2020       | word list with markup         | R index by categories        |
 | cloudindex.idx       | 2020       | word list with minimal markup | word cloud on the cover      |
 
+## R code for code chunks in the book
+
+The code examples from the book, extracted with `knitr::purl()` are included in this package in file `purl-output.zip`. The code from chunks in the book are in one `.R` file per chapter. The code below extracts and saves these files in a new directory called `purl-output` under the directory passed as argument to `exdir`. Here we use `~` to select the home directory of the current user:
+
+```{r, purl-output, eval=FALSE}
+zip.file <- system.file("example-chunks/purl-output.zip", package = "learnrbook")
+unzip(zip.file, exdir = "~")
+```
+
+Alternatively the whole `.zip` file can be copied:
+
+```{r, zip-copy, eval=FALSE}
+file.copy(from = zip.file, to = `~`)
+```
+
 ## The book "Learn R: As a Language"
 
 ![Book front cover](images/cover-small.png)
 
 ### Reference
 
-**Aphalo P J**. 2020. *Learn R: As a Language.* CRC/Taylor & Francis
-Ltd. 364 pp. ISBN 9780367182533
-
-(Paperback), ISBN 9780367182557 (Hardback), ISBN 9780429060342 (eBook).
+**Aphalo P J**. 2020. *Learn R: As a Language.* CRC/Taylor & Francis Ltd. 364 pp. ISBN 9780367182533 (Paperback), ISBN 9780367182557 (Hardback), ISBN 9780429060342 (eBook).
 
 Find a copy in a library:
 <https://www.worldcat.org/title/learn-r-as-a-language/oclc/1193108001>

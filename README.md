@@ -8,10 +8,11 @@ version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-projec
 
 ## Purpose
 
-Package ‘learnrbook’ contains data in R objects and in foreign files
-used as examples in the book ***Learn R: As a Language*** by Pedro J.
-Aphalo, New York: Chapman and Hall/CRC, 2020, ISBN 9780367182533 (pbk);
-ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk); DOI
+Package ‘learnrbook’ contains data in R objects and in foreign files,
+the R scripts used in examples and R code from all code chunks from the
+book ***Learn R: As a Language*** by Pedro J. Aphalo, New York: Chapman
+and Hall/CRC, 2020, ISBN 9780367182533 (pbk); ISBN 9780367182557 (hbk);
+ISBN 9780429060342 (ebk); DOI
 [10.1201/9780429060342](https://doi.org/10.1201/9780429060342).
 
 This package also exports as character vectors the names of the packages
@@ -56,6 +57,13 @@ of 13 R packages currently in CRAN.
 ORCID:
 [0000-0003-3385-972X](https://orcid.org/0000-0003-3385-972X "public ORCID profile")
 
+## Book updates
+
+Changes to two packages in the ‘tidyverse’ result in a few deprecation
+warning messages. The code for chunks included in this package has been
+updated to avoid them, but otherwise is unchanged from that in the
+printed book.
+
 ## Installation
 
 Installation of the most recent stable version from CRAN:
@@ -75,6 +83,11 @@ devtools::install_bitbucket("aphalo/learnrbook-pkg")
 
 HTML documentation is available at
 <https://docs.r4photobiology.info/learnrbook/>.
+
+The User Guide shows how to access example code, scripts and data, and
+how to install the packages used in the book. The user guide is included
+as a vignette in this package and also available at
+<https://docs.r4photobiology.info/learnrbook/articles/user-guide.html>.
 
 News about updates are regularly posted at
 <https://www.r4photobiology.info/>.
@@ -103,7 +116,7 @@ publications, please cite according to:
 citation("learnrbook")
 #> 
 #> Aphalo P (2021). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
-#> Book_. R package version 1.0.1.9000, <URL:
+#> Book_. R package version 1.0.2, <URL:
 #> https://CRAN.R-project.org/package=learnrbook>.
 #> 
 #> Aphalo P (2020). _Learn R: As a Language_, series R Series. Chapman and

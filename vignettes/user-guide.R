@@ -33,3 +33,10 @@ head(viikki_d29.dat)
 path2examples <- system.file("extdata", package = "learnrbook")
 list.files(path2examples)
 
+## ---- purl-output, eval=FALSE-------------------------------------------------
+#  zip.file <- system.file("example-chunks/purl-output.zip", package = "learnrbook")
+#  unzip(zip.file, exdir = "~")
+
+## ---- zip-copy, eval=FALSE----------------------------------------------------
+#  file.copy(from = zip.file, to = `~`)
+
