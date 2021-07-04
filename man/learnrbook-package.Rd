@@ -4,7 +4,7 @@
 \name{learnrbook-package}
 \alias{learnrbook}
 \alias{learnrbook-package}
-\title{learnrbook: Datasets and code examples from P. J. Aphalo's "Learn R" Book}
+\title{learnrbook: Datasets and Code Examples from P. J. Aphalo's "Learn R" Book}
 \description{
 Data, scripts and code from chunks used as examples in the book 
    "Learn R: As a Language" by Pedro J. Aphalo.
