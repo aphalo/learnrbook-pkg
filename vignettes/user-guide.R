@@ -38,5 +38,5 @@ list.files(path2examples)
 #  unzip(zip.file, exdir = "~")
 
 ## ---- zip-copy, eval=FALSE----------------------------------------------------
-#  file.copy(from = zip.file, to = `~`)
+#  file.copy(from = zip.file, to = "~")
 

@@ -159,7 +159,7 @@ unzip(zip.file, exdir = "~")
 Alternatively the whole `.zip` file can be copied:
 
 ```{r, zip-copy, eval=FALSE}
-file.copy(from = zip.file, to = `~`)
+file.copy(from = zip.file, to = "~")
 ```
 
 ## The book "Learn R: As a Language"
