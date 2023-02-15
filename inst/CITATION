@@ -10,7 +10,7 @@ bibentry(bibtype = "Manual",
 
 bibentry(bibtype = "Book",
          title = "Learn R: As a Language",
-         booktitle = "{Learn R: As a Language",
+         booktitle = "Learn R: As a Language",
          author = c(person("Pedro J.", "Aphalo")),
          year = 2020,
          isbn = "9780367182533",
