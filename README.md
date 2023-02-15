@@ -102,10 +102,10 @@ welcome at <https://github.com/aphalo/learnrbook-pkg>.
 
 The book manuscript itself is in a public Git repository and suggestions
 for improvements are very welcome. They will be listed as errata and
-incorporated into later editions and acknowledged. Please, report
-errors, unclear text passages, and outdated code examples at
-<https://github.com/aphalo/learnrbook-book/issues>. Pull requests are
-welcome at <https://github.com/aphalo/learnrbook-book>.
+incorporated into the 2nd and later editions and acknowledged. Please,
+report errors, unclear text passages, and outdated code examples at
+<https://github.com/aphalo/learnr-book-crc/issues>. Pull requests are
+welcome at <https://github.com/aphalo/learnr-book-crc>.
 
 ## Citation
 
@@ -115,14 +115,16 @@ publications, please cite according to:
 ``` r
 citation("learnrbook")
 #> 
-#> Aphalo P (2021). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
-#> Book_. R package version 1.0.2, <URL:
-#> https://CRAN.R-project.org/package=learnrbook>.
+#> To cite package 'learnrbook' in publications use:
 #> 
-#> Aphalo P (2020). _Learn R: As a Language_, series R Series. Chapman and
-#> Hall/CRC, New York. ISBN 9780367182533, doi: 10.1201/9780429060342
-#> (URL: https://doi.org/10.1201/9780429060342), <URL:
-#> https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533>.
+#>   Aphalo P (2023). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
+#>   Book_. R package version 1.0.2-1,
+#>   <https://CRAN.R-project.org/package=learnrbook>.
+#> 
+#>   Aphalo P (2020). _Learn R: As a Language_, series R Series. Chapman
+#>   and Hall/CRC, New York. ISBN 9780367182533, doi:10.1201/9780429060342
+#>   <https://doi.org/10.1201/9780429060342>,
+#>   <https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533>.
 #> 
 #> To see these entries in BibTeX format, use 'print(<citation>,
 #> bibtex=TRUE)', 'toBibtex(.)', or set
@@ -131,6 +133,6 @@ citation("learnrbook")
 
 ## License
 
-© 2018-2021 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
+© 2018-2023 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
 the GPL, version 2 or greater. This software carries no warranty of any
 kind.

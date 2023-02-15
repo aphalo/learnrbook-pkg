@@ -70,7 +70,7 @@ Please report bugs and request new features at <https://github.com/aphalo/learnr
 
 ## Contributing to the book
 
-The book manuscript itself is in a public Git repository and suggestions for improvements are very welcome. They will be listed as errata and incorporated into later editions and acknowledged. Please, report errors, unclear text passages, and outdated code examples at <https://github.com/aphalo/learnrbook-book/issues>. Pull requests are welcome at <https://github.com/aphalo/learnrbook-book>.
+The book manuscript itself is in a public Git repository and suggestions for improvements are very welcome. They will be listed as errata and incorporated into the 2nd and later editions and acknowledged. Please, report errors, unclear text passages, and outdated code examples at <https://github.com/aphalo/learnr-book-crc/issues>. Pull requests are welcome at <https://github.com/aphalo/learnr-book-crc>.
 
 ## Citation
 
@@ -82,4 +82,4 @@ citation("learnrbook")
 
 ## License
 
-© 2018-2021 Pedro J. Aphalo ([pedro.aphalo\@helsinki.fi](mailto:pedro.aphalo@helsinki.fi)). Released under the GPL, version 2 or greater. This software carries no warranty of any kind.
+© 2018-2023 Pedro J. Aphalo ([pedro.aphalo\@helsinki.fi](mailto:pedro.aphalo@helsinki.fi)). Released under the GPL, version 2 or greater. This software carries no warranty of any kind.
