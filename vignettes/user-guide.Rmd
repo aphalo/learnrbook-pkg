@@ -15,8 +15,9 @@ editor_options:
 
 ## The R Package 'learnrbook'
 
-This package contains data sets used in the code examples in the book
-"Learn R: As a Language" by Pedro J. Aphalo (2020), available directly
+This package contains data sets used in the code examples in the books
+"Learn R: As a Language" (1ed) by Pedro J. Aphalo (2020) and
+"Learn R: As a Language" (2ed) by Pedro J. Aphalo (2023). Available directly
 from the
 [publisher](https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533 "publisher's webstore")
 and through booksellers. The book uses mostly data sets included in the
@@ -44,29 +45,34 @@ library(learnrbook)
 ## Installation of other packages used in the book
 
 In the code examples in the book I use several packages available from
-CRAN. They are loaded in a code chunk at the start of chapters 6, 7, and
-8, where they are used. To facilitate their installation and use,
-vectors containing package names are provided.
+CRAN. In the first edition they are loaded in a code chunk at the start of chapters 6, 7, and
+8, where they are used, while in the second edition they are loaded in chapters XXXX. To facilitate their installation and use, vectors containing package names are provided.
 
-To install all the packages used in the book you can use.
+To install all the packages used in the 2nd edition of the book you can use.
 
 ```{r, eval=FALSE}
-install.packages(learnrbook::pkgs_all)
+install.packages(learnrbook::pkgs_all_2ed)
+```
+
+To install all the packages used in the 1st edition of the book you can use.
+
+```{r, eval=FALSE}
+install.packages(learnrbook::pkgs_all_1ed)
 ```
 
 If you rather install only the packages used in a given chapter, for
-example, chapter 7 on the *Grammar of Graphics* it is possible to
+example, chapter 9 on the *Grammar of Graphics* it is possible to
 install only these.
 
 ```{r, eval=FALSE}
-install.packages(learnrbook::pkgs_ch_graphics)
+install.packages(learnrbook::pkgs_ch9_2ed)
 ```
 
 To install only the packages that are missing.
 
 ```{r, eval=FALSE}
 intalled_pkgs <- installed.packages()[ , 1]
-missing_pkgs <- setdiff(learnrbook::pkgs_all, intalled_pkgs)
+missing_pkgs <- setdiff(learnrbook::pkgs_all_2ed, intalled_pkgs)
 if (length(missing_pkgs) > 0) {
  install.packages(missing_pkgs)
 }
@@ -103,7 +109,7 @@ way of finding the path to this folder.
 system.file("extdata", package = "learnrbook")
 ```
 
-We can also easily get a list of the available example files.
+A list of all the data files used in at least one of the editions can be obtained with.
 
 ```{r}
 path2examples <- system.file("extdata", package = "learnrbook")
@@ -116,7 +122,7 @@ The formats of these files are:
 |:----------------|:-------|:------------------------------------------------|
 | .SYS            | Systat | proprietary, format depends on operating system |
 | .sav            | SPSS   | proprietary                                     |
-| .txt            | text   |                                                 |
+| .txt            | text   | plain text                                                |
 | .fwd            | text   | fixed-width data fields                         |
 | .csv            | text   | comma separated fields                          |
 | .tsv            | text   | tab(ulator) separated values                    |
@@ -127,10 +133,10 @@ The formats of these files are:
 | .R              | text   | R script file                                   |
 | .idx            | text   | $\LaTeX$ index                                  |
 
-Most data files are used in Chapter 8 *Data Input and Output*.
+Most data files are used in the last chapter *Data Input and Output*.
 
-The example R script is used in Chapter 3 *The R language: "Paragraphs"
-and "essays"*
+The example R script is used in Chapter *The R language: "Paragraphs"
+and "essays"*.
 
 The sources of the data in these files, and a short descriptions of the
 data follows for those files that contain real data.
@@ -152,7 +158,7 @@ data follows for those files that contain real data.
 The code examples from the book, extracted with `knitr::purl()` are included in this package in file `purl-output.zip`. The code from chunks in the book are in one `.R` file per chapter. The code below extracts and saves these files in a new directory called `purl-output` under the directory passed as argument to `exdir`. Here we use `~` to select the home directory of the current user:
 
 ```{r, purl-output, eval=FALSE}
-zip.file <- system.file("example-chunks/purl-output.zip", package = "learnrbook")
+zip.file <- system.file("example-chunks/purl-output-2ed.zip", package = "learnrbook")
 unzip(zip.file, exdir = "~")
 ```
 
@@ -162,7 +168,7 @@ Alternatively the whole `.zip` file can be copied:
 file.copy(from = zip.file, to = "~")
 ```
 
-## The book "Learn R: As a Language"
+## The book "Learn R: As a Language" 1ed
 
 ![Book front cover](images/cover-small.png)
 
@@ -227,10 +233,10 @@ What makes this book different to others?
     fluent in the R language.
 
 **Pedro J. Aphalo** is a PhD graduate from the University of Edinburgh,
-currently lecturer at the University of Helsinki. A plant biologist and
+currently Senior Lecturer at the University of Helsinki. A plant biologist and
 agriculture scientist with a passion for data, electronics, computers
-and photography in addition to plants. A user of R for 25 years, who
-first organized an R course for MSc students 18 years ago and the author
+and photography in addition to plants. A user of R for nearly 30 years, who
+first organized an R course for MSc students 21 years ago and author
 of 13 R packages currently in CRAN.
 
 ORCID:

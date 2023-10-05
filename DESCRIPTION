@@ -1,22 +1,22 @@
 Package: learnrbook
 Type: Package
 Title: Datasets and Code Examples from P. J. Aphalo's "Learn R" Book
-Version: 1.0.2-1
-Date: 2023-02-15
+Version: 2.0.0
+Date: 2023-10-05
 Authors@R:
    c(
     person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3385-972X"))
     )
 Maintainer: Pedro J. Aphalo <pedro.aphalo@helsinki.fi>
 Description: Data, scripts and code from chunks used as examples in the book 
-   "Learn R: As a Language" by Pedro J. Aphalo.
-   ISBN 9780367182533 (pbk); ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk).
+   "Learn R: As a Language" 1ed and 2ed by Pedro J. Aphalo.
+   ISBN 9780367182533 (pbk 1ed); ISBN 9780367182557 (hbk 1ed); ISBN 9780429060342 (ebk 1ed).
 License: GPL (>= 2)
 LazyLoad: yes
 LazyData: yes
 ByteCompile: yes
 Depends:
-    R (>= 3.6.0)
+    R (>= 4.0.0)
 Suggests:
     roxygen2 (>= 6.0.1),
     knitr (>= 1.15.1),
