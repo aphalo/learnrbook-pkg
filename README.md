@@ -1,6 +1,4 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # learnrbook <img src="man/figures/cover-small.png" align="right" width="120"/>
 
 [![cran
@@ -114,7 +112,6 @@ publications, please cite according to:
 
 ``` r
 citation("learnrbook")
-#> 
 #> To cite package 'learnrbook' in publications use:
 #> 
 #>   Aphalo P (2023). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
