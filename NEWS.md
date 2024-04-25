@@ -1,3 +1,7 @@
+# learnrbook 2.0.1
+
+Version at time of manuscript publication of 2nd edition.
+
 # learnrbook 2.0.0
 
 Version at time of manuscript submission of 2nd edition.
@@ -14,14 +18,14 @@ Version at time of manuscript submission of 2nd edition.
 
 # learnrbook 1.0.2
 
-Version released one year after book publication.
+Version released one year after book publication of 1st edition.
 
 -   Add purl output for all code chunks included in the book in file `purl-output.zip`.
 -   Revise and expand documentation.
 
 # learnrbook 1.0.1
 
-Version at time of book first availability.
+Version at time of publication of 1st edition.
 
 -   Add book ISBN and DOI.
 -   Add .idx files from book.
@@ -29,7 +33,7 @@ Version at time of book first availability.
 
 # learnrbook 1.0.0
 
-Version at time final manuscript submission.
+Version at time final manuscript submission of 1st edition.
 
 -   Update lists of packages used.
 

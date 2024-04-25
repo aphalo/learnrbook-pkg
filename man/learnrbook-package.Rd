@@ -20,6 +20,7 @@ in the book. Please, consult the "User Guide" under vignettes for instructions.
 Useful links:
 \itemize{
   \item \url{https://docs.r4photobiology.info/learnrbook/}
+  \item \url{https://github.com/aphalo/learnrbook-pkg/}
   \item Report bugs at \url{https://github.com/aphalo/learnrbook-pkg/issues}
 }
 

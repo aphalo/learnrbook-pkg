@@ -1,8 +1,8 @@
 Package: learnrbook
 Type: Package
 Title: Datasets and Code Examples from P. J. Aphalo's "Learn R" Book
-Version: 2.0.0
-Date: 2023-10-05
+Version: 2.0.1
+Date: 2023-04-25
 Authors@R:
    c(
     person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3385-972X"))
@@ -18,12 +18,12 @@ ByteCompile: yes
 Depends:
     R (>= 4.0.0)
 Suggests:
-    roxygen2 (>= 6.0.1),
-    knitr (>= 1.15.1),
-    devtools (>= 1.12.0),
-    rmarkdown (>= 1.5)
+    roxygen2 (>= 7.3.0),
+    knitr (>= 1.46),
+    devtools (>= 2.4.5),
+    rmarkdown (>= 2.20)
 URL: https://docs.r4photobiology.info/learnrbook/, https://github.com/aphalo/learnrbook-pkg/
 BugReports: https://github.com/aphalo/learnrbook-pkg/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
