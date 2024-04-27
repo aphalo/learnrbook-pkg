@@ -1,5 +1,5 @@
 
-# learnrbook <img src="man/figures/cover-small-1ed.png" align="right" width="120"/> <img src="man/figures/cover-small-2ed.png" align="right" width="120"/>
+# learnrbook <img src="man/figures/cover-small-1ed.png" align="right" width="16%"/> <img src="man/figures/cover-small-2ed.jpg" align="right" width="30%"/>
 
 [![cran
 version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-project.org/package=learnrbook)
@@ -83,12 +83,6 @@ repository at the [R-Universe](https://aphalo.r-universe.dev/):
 install.packages('learnrbook', 
                  repos = c('https://aphalo.r-universe.dev', 
                            'https://cloud.r-project.org'))
-#> Installing package into 'C:/Users/aphalo/AppData/Local/R/win-library/4.3'
-#> (as 'lib' is unspecified)
-#> package 'learnrbook' successfully unpacked and MD5 sums checked
-#> 
-#> The downloaded binary packages are in
-#>  C:\Users\aphalo\AppData\Local\Temp\Rtmpwd5Kv4\downloaded_packages
 ```
 
 Installation of the current unstable version from GitHub (from sources
@@ -96,7 +90,7 @@ only):
 
 ``` r
 # install.packages("remotes")
-remotes::install_bitbucket("aphalo/learnrbook-pkg")
+remotes::install_github("aphalo/learnrbook-pkg")
 ```
 
 ## Documentation
