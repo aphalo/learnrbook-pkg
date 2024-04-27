@@ -1,31 +1,38 @@
-destination: ../learnr-docs
+destination: ../docs/learnr
 url: https://docs.r4photobiology.info/learnr/
 
 reference:
-- title: All functions
-  contents:
-  - '`clean1000.df`'
-  - '`clean5000.df`'
-  - '`learnrbook-package`'
-  - '`pkgs_all`'
-  - '`pkgs_ch_data`'
-  - '`pkgs_ch_data_io`'
-  - '`pkgs_ch_graphics`'
-  - '`viikki_d29.dat`'
-  - '`weather_wk_25_2019.tb`'
+  - title: Package overview
+    contents:
+    - '`learnrbook-package`'
+  - title: Packages used (1ed of the book)
+    desc: Used to install the packages (see Articles > User Guide).
+    contents:
+    - '`pkgs_all_1ed`'
+    - '`pkgs_ch6_1ed`'
+    - '`pkgs_ch7_1ed`'
+    - '`pkgs_ch8_1ed`'
+  - title: Packages used (2ed of the book)
+    desc: Used to install the packages (see Articles > User Guide).
+    contents:
+    - '`pkgs_all_2ed`'
+    - '`pkgs_ch8_2ed`'
+    - '`pkgs_ch9_2ed`'
+    - '`pkgs_ch10_2ed`'
+  - title: Data objects used in examples
+    desc: Data objects used in examples.
+    contents:
+    - '`clean1000.df`'
+    - '`clean5000.df`'
+    - '`viikki_d29.dat`'
+    - '`weather_wk_25_2019.tb`'
 
 navbar:
   structure:
-    left:
-    - home
-    - intro
-    - reference
-    - articles
-    - tutorials
-    - news
-    right: github
+    left:  [intro, reference, articles, tutorials, news]
+    right: [search, github]
   components:
-    home:
+    intro:
       icon: fas fa-home fa-lg
       href: index.html
     reference:
@@ -33,13 +40,26 @@ navbar:
       href: reference/index.html
     articles:
       text: User Guide
-      href: articles/user-guide.html
+      menu:
+      - text: Package User Guide
+        href: articles/user-guide.html
+      - text: Book Website
+        href: https://www.learnr-book.info/
     tutorials:
       text: Resources
       menu:
+      - text: Book Website
+        href: https://www.learnr-book.info/
+      - text: The word cloud on the cover explained
+        href: https://www.learnr-book.info/wordcloud.html
+      - text: ------
       - text: Blog on R by Pedro J. Aphalo
         href: https://www.r4photobiology.info/
       - text: R packages by Pedro J. Aphalo
-        href: https://www.r4photobiology.info/package-status/
-      - text: The word cloud on the cover explained
-        href: https://www.r4photobiology.info/2020/08/word-cloud-figure/
+        href: https://docs.r4photobiology.info/
+    news:
+      text: Changelog
+      href: news/index.html
+    github:
+      icon: fab fa-github fa-lg
+      href: https://github.com/aphalo/learnrbook-pkg/

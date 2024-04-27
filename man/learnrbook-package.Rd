@@ -6,11 +6,12 @@
 \alias{learnrbook-package}
 \title{learnrbook: Datasets and Code Examples from P. J. Aphalo's "Learn R" Book}
 \description{
-Data, scripts and code from chunks used as examples in the book "Learn R: As a Language" by Pedro J. Aphalo. ISBN 9780367182533 (pbk); ISBN 9780367182557 (hbk); ISBN 9780429060342 (ebk).
+Data, scripts and code from chunks used as examples in the book "Learn R: As a Language" 1ed and 2ed by Pedro J. Aphalo. ISBN 9780367182533 (pbk 1ed); ISBN 9780367182557 (hbk 1ed); ISBN 9780429060342 (ebk 1ed).
 }
 \details{
-Package 'learnr' is a companion to the book Aphalo, P. (2020). Learn R. New
-York: Chapman and Hall/CRC, ISBN 9780367182533". This package supplies a list
+Package 'learnr' is a companion to the books Aphalo, P. (2020). Learn R (1ed). New
+York: Chapman and Hall/CRC, ISBN 9780367182533" and Aphalo, P. (2023). Learn R (2ed). New
+York: Chapman and Hall/CRC, ISBN 9781032516998". This package supplies a list
 of all the packages used in the book. It also contains all the original data
 sets used in the book as well as code for scripts and code chunks included
 in the book. Please, consult the "User Guide" under vignettes for instructions.
@@ -19,6 +20,7 @@ in the book. Please, consult the "User Guide" under vignettes for instructions.
 Useful links:
 \itemize{
   \item \url{https://docs.r4photobiology.info/learnrbook/}
+  \item \url{https://github.com/aphalo/learnrbook-pkg/}
   \item Report bugs at \url{https://github.com/aphalo/learnrbook-pkg/issues}
 }
 
