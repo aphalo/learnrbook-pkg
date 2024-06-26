@@ -6,6 +6,8 @@
 \alias{learnrbook-package}
 \title{learnrbook: Datasets and Code Examples from P. J. Aphalo's "Learn R" Book}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Data, scripts and code from chunks used as examples in the book "Learn R: As a Language" 1ed and 2ed by Pedro J. Aphalo. ISBN 9780367182533 (pbk 1ed); ISBN 9780367182557 (hbk 1ed); ISBN 9780429060342 (ebk 1ed).
 }
 \details{

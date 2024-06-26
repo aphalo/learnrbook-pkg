@@ -13,9 +13,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-# learnrbook <img src="man/figures/cover-small-1ed.png" align="right" width="16%"/> <img src="man/figures/cover-small-2ed.jpg" align="right" width="30%"/>
+# learnrbook <img src="man/figures/logo.png" align="right" width="15%"/>
 
 [![cran version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-project.org/package=learnrbook)
+[![cran checks](https://badges.cranchecks.info/worst/learnrbook.svg)](https://cran.r-project.org/web/checks/check_results_learnrbook.html)
+[![ggpmisc status badge](https://aphalo.r-universe.dev/badges/learnrbook)](https://aphalo.r-universe.dev/learnrbook)
+<a href="https://docs.r4photobiology.info/learnrbook/"><img src="https://img.shields.io/badge/documentation-learnrbook-informational.svg" alt="" /></a>
+[![](https://img.shields.io/badge/doi-10.32614/CRAN.package.learnrbook-blue.svg)](https://doi.org/10.32614/CRAN.package.learnrbook)
 
 ## Purpose
 
@@ -25,21 +29,18 @@ This package also exports as character vectors the names of the packages used in
 
 ## The book "Learn R: As a Language" 1ed and 2ed
 
+![](man/figures/cover-small-1ed.png){width="20%"}
+![](man/figures/cover-small-2ed.jpg){width="30%"}
+
 Learning a computer language like R can be either frustrating, fun or boring. Having fun requires challenges that wake up the learner's curiosity but also provide an emotional reward for overcoming them. The book is designed so that it includes smaller and bigger challenges, in what I call playgrounds, in the hope that all readers will enjoy their path to R fluency. Fluency in the use of a language is a skill that is acquired through practice and exploration. For students and professionals in the biological sciences, humanities and many applied fields, recognizing the parallels between R and natural languages should help them feel at home with R. The approach I use is similar to that of a travel guide, encouraging exploration and describing the available alternatives and how to reach them. The intention is to guide the reader through the R landscape of 2024 and beyond.
 
 **Aphalo P J**. 2024. *Learn R: As a Language.* CRC/Taylor & Francis Ltd. 364 pp. ISBN 9781032516998 (Paperback), ISBN 9781032518435 (Hardback), ISBN 9781003404187 (eBook).
 
-Find a copy in a library: <https://search.worldcat.org/title/1429162419>
-
-Buy a copy from the publisher: <https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9781032516998>
-
 **Aphalo P J**. 2020. *Learn R: As a Language.* CRC/Taylor & Francis Ltd. 364 pp. ISBN 9780367182533 (Paperback), ISBN 9780367182557 (Hardback), ISBN 9780429060342 (eBook).
 
-Find a copy in a library: <https://www.worldcat.org/title/learn-r-as-a-language/oclc/1193108001>
+Information about the book and its contents is available at [https://www.learnr-book.info/](https://www.learnr-book.info/).
 
-Buy a copy from the publisher: <https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533>
-
-**Pedro J. Aphalo** is a PhD graduate from the University of Edinburgh, currently a Senior Lecturer at the University of Helsinki. A plant biologist and agriculture scientist with a passion for data, electronics, computers and photography in addition to plants. A user of R for more than 25 years, who first organized an R course for MSc students 22 years ago and the author of 13 R packages currently in CRAN.
+**Pedro J. Aphalo** is a PhD graduate from the University of Edinburgh, currently a Senior Lecturer at the University of Helsinki. A plant biologist and agriculture scientist with a passion for data, electronics, computers and photography in addition to plants. A user of R for more than 25 years, who first organized an R course for MSc students 22 years ago and the author and maintainer of 13 R packages currently in CRAN.
 
 ORCID: [0000-0003-3385-972X](https://orcid.org/0000-0003-3385-972X "public ORCID profile")
 

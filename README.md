@@ -1,8 +1,14 @@
 
-# learnrbook <img src="man/figures/cover-small-1ed.png" align="right" width="16%"/> <img src="man/figures/cover-small-2ed.jpg" align="right" width="30%"/>
+# learnrbook <img src="man/figures/logo.png" align="right" width="15%"/>
 
 [![cran
 version](https://www.r-pkg.org/badges/version/learnrbook)](https://cran.r-project.org/package=learnrbook)
+[![cran
+checks](https://badges.cranchecks.info/worst/learnrbook.svg)](https://cran.r-project.org/web/checks/check_results_learnrbook.html)
+[![ggpmisc status
+badge](https://aphalo.r-universe.dev/badges/learnrbook)](https://aphalo.r-universe.dev/learnrbook)
+<a href="https://docs.r4photobiology.info/learnrbook/"><img src="https://img.shields.io/badge/documentation-learnrbook-informational.svg" alt="" /></a>
+[![](https://img.shields.io/badge/doi-10.32614/CRAN.package.learnrbook-blue.svg)](https://doi.org/10.32614/CRAN.package.learnrbook)
 
 ## Purpose
 
@@ -20,6 +26,9 @@ This package also exports as character vectors the names of the packages
 used in the book, so as to make it easier to install them.
 
 ## The book “Learn R: As a Language” 1ed and 2ed
+
+<img src="man/figures/cover-small-1ed.png" style="width:20.0%" />
+<img src="man/figures/cover-small-2ed.jpg" style="width:30.0%" />
 
 Learning a computer language like R can be either frustrating, fun or
 boring. Having fun requires challenges that wake up the learner’s
@@ -39,27 +48,20 @@ through the R landscape of 2024 and beyond.
 Ltd. 364 pp. ISBN 9781032516998 (Paperback), ISBN 9781032518435
 (Hardback), ISBN 9781003404187 (eBook).
 
-Find a copy in a library: <https://search.worldcat.org/title/1429162419>
-
-Buy a copy from the publisher:
-<https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9781032516998>
-
 **Aphalo P J**. 2020. *Learn R: As a Language.* CRC/Taylor & Francis
 Ltd. 364 pp. ISBN 9780367182533 (Paperback), ISBN 9780367182557
 (Hardback), ISBN 9780429060342 (eBook).
 
-Find a copy in a library:
-<https://www.worldcat.org/title/learn-r-as-a-language/oclc/1193108001>
-
-Buy a copy from the publisher:
-<https://www.routledge.com/Learn-R-As-a-Language/Aphalo/p/book/9780367182533>
+Information about the book and its contents is available at
+<https://www.learnr-book.info/>.
 
 **Pedro J. Aphalo** is a PhD graduate from the University of Edinburgh,
 currently a Senior Lecturer at the University of Helsinki. A plant
 biologist and agriculture scientist with a passion for data,
 electronics, computers and photography in addition to plants. A user of
 R for more than 25 years, who first organized an R course for MSc
-students 22 years ago and the author of 13 R packages currently in CRAN.
+students 22 years ago and the author and maintainer of 13 R packages
+currently in CRAN.
 
 ORCID:
 [0000-0003-3385-972X](https://orcid.org/0000-0003-3385-972X "public ORCID profile")
@@ -129,8 +131,8 @@ publications, please cite according to:
 citation("learnrbook")
 #> To cite package 'learnrbook' in publications use:
 #> 
-#>   Aphalo P (2023). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
-#>   Book_. R package version 1.0.2-1,
+#>   Aphalo P (2024). _learnrbook: Datasets for P. J. Aphalo's "Learn R"
+#>   Book_. R package version 2.0.1,
 #>   <https://CRAN.R-project.org/package=learnrbook>.
 #> 
 #>   Aphalo P (2020). _Learn R: As a Language_, series R Series. Chapman
